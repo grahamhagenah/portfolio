@@ -1,0 +1,15 @@
+---
+layout: layout.njk
+title: Project Layout
+---
+
+<main class="project-description">
+  <h1>{{title}}</h1>
+  <p>{{intro.summary}}</p>
+  <figure>
+    <img class="browser" src="/assets/img/browser.svg" alt="" />
+    <img class="project-image" src={{intro.image}} aria-label="Project preview" alt={{intro.alt}} />
+    </div>
+  </figure>
+  {{ content | safe }}
+</main>
