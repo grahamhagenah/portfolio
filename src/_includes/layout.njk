@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {# Meta #}
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Graham Hagenah's Web Portfolio">
+  <meta name="keywords" content="Developer, Portfolio, HTML, CSS, JavaScript, Front-end">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# Favicons #}
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
+  {# Styles #}
   <link rel="stylesheet" href="/style.css">
+
   <title>{{ title }}</title>
 </head>
 <body>
   <nav>
-    <a href="/">
-      <img src="/assets/img/logo.svg" width="50" height="50" />
-    </a>
+    <ul>
+      <li>
+        <a href="/">
+          <img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="50" height="50" alt="Logo" />
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+    </ul>
   </nav>
   {{ content | safe }}
   <footer>
