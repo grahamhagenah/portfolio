@@ -1,14 +1,20 @@
 html {
-  margin: 0 auto;
   max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+:root {
+  --black: #2E2E2E;
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-  margin: 3rem 0;
-  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif;
+  color: var(--black);
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 3rem 15px;
+  max-width: 100%;
 }
 
 main {
@@ -16,10 +22,15 @@ main {
   margin: 10rem 0;
 }
 
+strong {
+  font-weight: 800;
+}
+
 h1 {
-  font-size: 4rem;
-  line-height: 1.25;
-  margin: 10rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 4rem 0;
 }
 
 h1, 
@@ -28,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Barlow', -apple-system, sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 ul, ol, dl {
@@ -41,8 +52,13 @@ body a {
 }
 
 nav a {
+  color: var(--black);
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #intro {
@@ -76,7 +92,7 @@ footer p {
 }
 
 #logo {
-  height: 35cpx;
+  height: 35px;
 }
 
 nav ul {
@@ -87,11 +103,16 @@ nav ul {
   list-style: none;
 }
 
+#projects {
+  list-style: none;
+}
+
 #skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
+  margin: 7rem 0;
 }
 
 #skills li {
@@ -124,4 +145,17 @@ nav ul {
 figure {
   max-width: 100%;
   margin: 5rem 0;
+}
+
+
+@media screen and (min-width: 40em) { 
+
+  h1 {
+    font-size: 4.25rem;
+    margin: 12rem 0;
+  }
+
+  body {
+    font-size: 25px;
+  }
 }
