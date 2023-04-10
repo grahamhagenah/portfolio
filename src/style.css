@@ -1,0 +1,15 @@
+footer ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+footer li {
+  padding: 0 15px;
+}
+
+footer p {
+  text-align: center;
+}

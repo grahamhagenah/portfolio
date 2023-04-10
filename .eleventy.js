@@ -1,0 +1,46 @@
+const eleventyWebcPlugin = require("@11ty/eleventy-plugin-webc");
+const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+
+module.exports = function(eleventyConfig) {
+
+  // WebC
+	eleventyConfig.addPlugin(eleventyWebcPlugin, {
+		components: [
+			// …
+			// Add as a global WebC component
+			"npm:@11ty/eleventy-img/*.webc",
+		]
+	});
+
+  // Image plugin
+	eleventyConfig.addPlugin(eleventyImagePlugin, {
+		// Set global default options
+		formats: ["webp", "jpeg"],
+		urlPath: "/img/",
+
+		// Notably `outputDir` is resolved automatically
+		// to the project output directory
+
+		defaultAttributes: {
+			loading: "lazy",
+			decoding: "async"
+		}
+	});
+
+  // Copy `src/style.css` to `_site/style.css`
+  eleventyConfig.addPassthroughCopy("src/style.css");
+
+  // Copy `assets` to `_site/assets`
+  eleventyConfig.addPassthroughCopy("assets");
+
+  return {
+    // When a passthrough file is modified, rebuild the pages:
+    passthroughFileCopy: true,
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
+    }
+  };
+};

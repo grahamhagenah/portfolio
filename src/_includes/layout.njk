@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>{{ title }}</title>
+</head>
+<body>
+  <nav>
+    <a href="/">
+      <img src="/assets/img/logo.svg" width="50" height="50" />
+    </a>
+  </nav>
+  {{ content | safe }}
+  <footer>
+    <ul>
+      <li>
+        <a href="mailto:gwhagenah@gmail.com" rel="noreferrer" target="_blank">Email</a> 
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/hagenah/" rel="noreferrer" target="_blank">LinkedIn</a> 
+      </li>
+      <li>
+        <a href="https://github.com/grahamhagenah/portfolio" rel="noreferrer" target="_blank">Source</a>
+      </li>
+    </ul>
+    <p>Graham Hagenah © 2023</p>
+  </footer>
+</body>
+</html>
