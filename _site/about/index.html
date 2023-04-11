@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {# Meta #}
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Graham Hagenah's Web Portfolio">
   <meta name="keywords" content="Developer, Portfolio, HTML, CSS, JavaScript, Front-end">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {# Favicons #}
+  
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
@@ -17,7 +17,7 @@
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
 
-  {# Fonts  #}
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -25,10 +25,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  {# Styles #}
+  
   <link rel="stylesheet" href="/style.css">
 
-  <title>{{ title }}</title>
+  <title>About</title>
 </head>
 <body>
   <nav>
@@ -41,14 +41,21 @@
           About
         </a>
       </li>
-      {# <li>
-        <a href="/contact">
-          Contact
-        </a>
-      </li> #}
+      
     </ul>
   </nav>
-  {{ content | safe }}
+  
+<main class="about-me">
+  <h1>About Me</h1>
+  <p>Hey again! My name is Graham Hagenah. I grew up in Western Massachusetts and moved to New York City in early 2023. I'm currently working as a freelance web developer and looking for full-time front-end development roles.</p>
+  <img class="content-img" src="/assets/img/about.jpg" alt="Photo of Graham at the Getty in Los Angeles" />
+  <h2>Work Experience</h2>
+  <p>My most recent role involved building websites and applications for The Predictive Index, a Boston-based tech company that creates personality and cognitive evaluations for the workplace. I primarily worked in the marketing department, collaborating with designers, copywriters, creative directors, and analysts to build the company's digital presence.</p>
+  <p>Before that, I worked at the Concord-based web agency, Bartlett Interactive - first as a summer intern, then transitioning into a full-time role building websites for many local nonprofits. I had the opportunity to build each project from the beginning, making decisions on the tech stack, managing the timeline and budget, and owning the relationship with each client.</p>
+  <p>I've also interned as a graphic designer for the University of Massachusetts, Amherst where I created multimedia designs for print and web.</p>
+  <h2>Beyond Work</h2>
+  <p>You're likely to find me projecting routes at the rock gym, practicing yoga, reading speculative fiction, and watching horror movies with friends.</p>
+</main>
   <footer>
     <p>Developed by Graham Hagenah. Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>. Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>. Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.</p>
   </footer>

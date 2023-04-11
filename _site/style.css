@@ -6,6 +6,7 @@ html {
 
 :root {
   --black: #2E2E2E;
+  --grey: #797979;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 }
 
 main {
-  max-width: 750px;
+  max-width: 725px;
   margin: 10rem 0;
 }
 
@@ -51,23 +52,39 @@ body a {
   color: black;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav a {
   color: var(--black);
-  font-size: 18px;
+  font-size: 16px;
+  font-family: 'Barlow', sans-serif;
   font-weight: 600;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0 1rem;
+}
+
+nav a:hover {
+  color: var(--grey);
 }
 
 #intro {
   max-width: 750px;
 }
 
-.project-description h1 {
+.project-description h1,
+.about-me h1 {
   font-size: 3rem;
-  margin: 10rem 0 0 0;
+  margin: 12rem 0 2rem 0;
+}
+
+footer {
+  margin-top: 10rem;
 }
 
 footer ul {
@@ -101,6 +118,8 @@ nav ul {
   align-items: center;
   text-align: center;
   list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #projects {
@@ -142,6 +161,13 @@ nav ul {
   border-radius: 0 0 10px 10px;
 }
 
+.content-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  margin: 4rem 0;
+}
+
 figure {
   max-width: 100%;
   margin: 5rem 0;
@@ -156,6 +182,14 @@ figure {
   }
 
   body {
+    font-size: 20px;
+  }
+
+  #intro {
     font-size: 25px;
+  }
+
+  main {
+    margin: 0rem auto;
   }
 }
