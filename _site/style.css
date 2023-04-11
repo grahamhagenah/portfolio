@@ -163,6 +163,7 @@ nav ul {
 
 .content-img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 10px;
   margin: 4rem 0;
