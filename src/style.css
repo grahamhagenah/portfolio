@@ -201,6 +201,7 @@ figure {
   border: 4px solid #f7f5f7;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #f7f5f7;
 }
 
 #projects a {
