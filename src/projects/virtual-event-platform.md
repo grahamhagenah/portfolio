@@ -10,10 +10,11 @@ intro:
   alt: ""
 ---
 
-## Stack Description 
+## Stack Description
 
 This event platform is built in React and hosted on a CDN through our instance of Pardot, a martketing tool in the Salesforce ecosystem. The live chat interface is provided by Stream Chat, a real-time chat messaging solution that allowed us to create profiles on-the-fly for each registrant as they entered the event.
 
 ## Additional Info
 
 I worked closely with a backend developer who created an API I could use to query information for all the registrants of the event. With access to the database of registrants, I was able to set up an authentication gate to the event, allowing only participants who registered through the proper channels to log in and view the feeds.
+
