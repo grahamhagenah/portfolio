@@ -20,7 +20,7 @@ In my experience, I can only get so much from reading a stranger’s blog post r
 
 ## Complexity For Its Own Sake
 
-Comprehensibility feels underrated in the current environment. Perhaps the tides are shifting, but I’ve seen many developers early in their career choosing to build their portfolios with React just to show that they can — I’ve fallen into this trap. The desire to impress potential  employers, or other developers, or to prove to yourself that you’re fluent in the latest framework is a powerful force. It leads to otherwise competent developers taking the more convoluted approach that may be difficult to maintain, less performant, and more error-prone.
+Comprehensibility feels underrated in the current environment. The tides may be shifting, but I’ve seen many developers early in their career choose to build their portfolios with React just to show that they can — I’ve fallen into this trap. The desire to impress potential employers, or other developers, or to prove to yourself that you’re fluent in the latest framework is a powerful force. It leads to otherwise competent developers taking a more convoluted approach that may be difficult to maintain, less performant, and more error-prone.
 
 I don’t mean to say that Gatbsy is the always the wrong option. It’s a fascinating framework with a strong, passionate community. I’ll be keeping a close eye on it for years to come, especially now that Netlify has acquired Gatsby Inc. But for me, in retrospect, it was a poor choice for the backbone of a tiny, personal website that only I would be updating.
 
