@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+title: Blog
+---
+
+<main class="interior-page">
+  <h1>Blog Posts</h1>
+  <ul id="posts">
+   {% for post in collections.blog %}
+    <li>
+      <a href="{{ post.url }}">
+        <figure class="blog-image-wrapper">
+          <img class="blog-image" src={{post.data.intro.preview}} aria-label="Project preview" alt={{intro.alt}} />
+        </figure>
+        <div class="details">
+          <h2 class="title">{{ post.data.title }}</h3>
+          <p class="read-more">Read Post</p>
+          <span class="arrow">›</span>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</main>

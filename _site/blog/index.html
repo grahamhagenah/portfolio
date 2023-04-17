@@ -28,7 +28,7 @@
   
   <link rel="stylesheet" href="/style.css">
 
-  <title>Scant Goods</title>
+  <title>Blog</title>
 </head>
 <body>
   <nav>
@@ -55,18 +55,25 @@
     </ul>
   </nav>
   
-<main class="project-description">
-  <h1>Scant Goods</h1>
-  <p class="summary-tag">Summary</p>
-  <p>While living with roommates, I wanted a simple, cross-platform solution for keeping track of grocery needs in a collaborative way. This application allows users to create groups and edit a shared checklist that&#39;s always up-to-date. Info for each item is available, so it&#39;s always clear who bought the milk this week.</p>
-  <figure>
-    <img class="browser" src="/assets/img/browser.svg" alt="" />
-    <img class="project-image" src=/assets/img/goods.jpg aria-label="Project preview" alt= />
-    </div>
-  </figure>
-  <h2>Stack Description</h2>
-<p>Remix provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it felt empowering to be in control of the full-stack. Remix makes it easy to interact with the server to get data into components. I didn't have to worry about keeping client-side state in sync with the server. By setting state with mutations, the loaders take over to refetch the most up-to-date data and make updates to your component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.</p>
-
+<main class="interior-page">
+  <h1>Blog Posts</h1>
+  <ul id="posts">
+   
+    <li>
+      <a href="/posts/simplicity/">
+        <figure class="blog-image-wrapper">
+          <img class="blog-image" src=/assets/img/simplicity.webp aria-label="Project preview" alt= />
+        </figure>
+        <div class="details">
+          <h2 class="title">Gatsby to Eleventy: Choosing Simplicity For My Personal Website
+</h3>
+          <p class="read-more">Read Post</p>
+          <span class="arrow">›</span>
+        </div>
+      </a>
+    </li>
+    
+  </ul>
 </main>
   <footer>
     <p><span>Developed by Graham Hagenah.</span><span>Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>.</span><span>Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>.</span><span>Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.<span></p>

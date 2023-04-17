@@ -3,14 +3,10 @@ layout: layout.njk
 title: Post Layout
 ---
 
-<main class="project-description">
+<main class="single-post">
   <h1>{{title}}</h1>
   <p class="summary-tag">Summary</p>
   <p>{{intro.summary}}</p>
-  <figure>
-    <img class="browser" src="/assets/img/browser.svg" alt="" />
-    <img class="project-image" src={{intro.image}} aria-label="Project preview" alt={{intro.alt}} />
-    </div>
-  </figure>
+  <img class="blog-image" src={{intro.image}} aria-label="Blog post image" alt={{intro.alt}} />
   {{ content | safe }}
 </main>

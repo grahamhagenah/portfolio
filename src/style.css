@@ -38,7 +38,8 @@ h6 {
 
 h1,
 .project-description h1,
-.about-me h1 {
+.single-post h1,
+.interior-page h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.15;
@@ -108,7 +109,6 @@ footer li {
 footer p {
   text-align: center;
   color: var(--grey);
-  background-color: rgb(246, 246, 246);
   padding: 10px;
   border-radius: 10px;
   font-size: 16px;
@@ -201,15 +201,35 @@ footer span {
   display: block;
 }
 
-.project-image-wrapper {
+.project-image-wrapper,
+.blog-image-wrapper {
   height: auto;
   border: none;
   margin: 0;
+  background-color: transparent;
+}
+
+.blog-image {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .project-image {
   width: 100%;
   display: block;
+}
+
+#posts {
+  list-style: none;
+  margin-top: 5rem;
+}
+
+#posts li {
+  margin-top: 5rem;
+}
+
+#posts a {
+  text-decoration: none;
 }
 
 #projects .project-image {
@@ -260,6 +280,7 @@ a .project-image-wrapper {
 
 .details .title {
   margin: 1rem 0;
+  line-height: 1.5;
 }
 
 .read-more {
@@ -281,6 +302,22 @@ body a:hover .arrow {
   transition: .5s;
 }
 
+.slide-in {
+  animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 40em) { 
 
   h1 {
@@ -289,7 +326,8 @@ body a:hover .arrow {
   }
 
   .project-description h1,
-  .about-me h1 {
+  .single-post h1,
+  .interior-page h1 {
     font-size: 3rem;
     margin: 12rem 0 2rem 0;
   }
@@ -304,6 +342,8 @@ body a:hover .arrow {
 
   #projects {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 8rem 5rem;
+    margin-top: 12rem;
   }
 
   #intro {

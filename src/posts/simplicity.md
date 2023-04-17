@@ -1,12 +1,13 @@
 ---
 layout: post.njk
-title: I'm Choosing Simplicity For My Personal Website
+title: >
+  Gatsby to Eleventy: Choosing Simplicity For My Personal Website
 subtitle: 
 tags: blog
 intro:
-  summary: I recently migrated my portfolio website from Gatsby, a React-based framework, to Eleventy, the simpler, markdown-friendly static-site generator, and in doing so recovered a long-forgotten peace of mind. 
-  image: /assets/img/eleventy.jpg
-  preview: /assets/img/simplicity.jpg
+  summary: I migrated my portfolio website from Gatsby, a React-based framework, to Eleventy, a simpler, markdown-friendly static-site generator, and discovered some peace of mind.
+  image: /assets/img/simplicity.webp
+  preview: /assets/img/simplicity.webp
   alt: ""
 ---
 
