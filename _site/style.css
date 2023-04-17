@@ -23,7 +23,7 @@ main {
 }
 
 strong {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 h1, 
@@ -42,7 +42,7 @@ h1,
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.15;
-  margin: 4rem 0;
+  margin: 5rem 0 2rem 0;
 }
 
 ul, ol, dl {
@@ -51,7 +51,14 @@ ul, ol, dl {
 }
 
 body a {
-  color: black;
+  text-decoration: underline;
+  color: var(--black);
+  text-decoration-color: #c7c7c7;
+  text-underline-offset: 4px;
+}
+
+body a:hover {
+  text-decoration-color: var(--black);
 }
 
 nav {
@@ -100,11 +107,20 @@ footer li {
 
 footer p {
   text-align: center;
+  color: var(--grey);
   background-color: rgb(246, 246, 246);
   padding: 10px;
   border-radius: 10px;
   font-size: 16px;
   font-family: sans-serif;
+}
+
+footer a {
+  color: var(--grey);
+}
+
+footer a:hover {
+  color: var(--black);
 }
 
 #logo {
@@ -135,13 +151,18 @@ nav ul {
 .summary-tag {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background-color: #2e2e2e;
   display: inline-block;
   border-radius: 20px;
-  padding: 0px 10px;
+  padding: 2px 10px 0 10px;
   margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+footer span {
+  padding: 3px;
 }
 
 #skills svg {
