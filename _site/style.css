@@ -124,7 +124,7 @@ footer a:hover {
 }
 
 #logo {
-  height: 35px;
+  height: 30px;
 }
 
 nav ul {
@@ -302,21 +302,15 @@ body a:hover .arrow {
   transition: .5s;
 }
 
-.slide-in {
-  animation: slide-in 1s ease-out;
+blockquote {
+  border-left: 2px solid var(--grey);
+  padding: 1rem 2rem;
+  margin: 6rem 0;
+  background-color: #f8f8f8;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
 
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+/* Styles for desktop-sized screens */
 
 @media screen and (min-width: 40em) { 
 
@@ -340,9 +334,13 @@ body a:hover .arrow {
     margin: 10rem 0;
   }
 
+  #logo {
+    height: 35px;
+  }
+
   #projects {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 8rem 5rem;
+    gap: 6rem 5rem;
     margin-top: 12rem;
   }
 
