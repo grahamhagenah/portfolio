@@ -90,6 +90,10 @@ nav a:hover {
   max-width: 750px;
 }
 
+p {
+  margin-block-start: 2rem;
+}
+
 footer {
   margin-top: 10rem;
 }
@@ -303,12 +307,17 @@ body a:hover .arrow {
 }
 
 blockquote {
-  border-left: 2px solid var(--grey);
-  padding: 1rem 2rem;
+  padding: 5rem 2rem 2rem 2rem;
+  border-left: 4px solid #82e9ff;
   margin: 6rem 0;
-  background-color: #f8f8f8;
+  background-color: #eefcff;
+  background-image: url("/assets/img/quote.svg");
+  background-repeat: no-repeat;
+  background-position-x: 2rem;
+  background-position-y: 1rem;
+  background-size: 4rem;
+  font-style: italic;
 }
-
 
 /* Styles for desktop-sized screens */
 
