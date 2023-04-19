@@ -3,6 +3,8 @@ layout: project.njk
 title: Virtual Event Platform
 subtitle: Virtual event application used to host the remote version of the 2022 Optima Conference.
 tags: project
+story: false
+order: 2
 intro:
   summary: Every year, The Predictive Index hosts a conference to discuss and grow the category of talent optimization. Since 2020, they've offered a remote experience to complement the in-person event with a service called Bizzabo, a platform for hosting hybrid and virtual events. In 2022, we nixed the third-party platform in favor of our own bespoke solution.
   image: /assets/img/optima.jpg

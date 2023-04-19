@@ -27,6 +27,15 @@ module.exports = function(eleventyConfig) {
 		}
 	});
 
+	eleventyConfig.addCollection("projects", collection => {
+    const projects = collection.getFilteredByGlob("src/projects/*.md")
+      .sort((a, b) => {
+        return Number(a.data.order) - Number(b.data.order);
+      });
+    return projects;
+  });
+
+
   // Copy `src/style.css` to `_site/style.css`
   eleventyConfig.addPassthroughCopy("src/style.css");
 

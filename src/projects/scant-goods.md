@@ -3,6 +3,8 @@ layout: project.njk
 title: Scant Goods
 subtitle: A full-stack, collaborative checklist application built with Remix.
 tags: project
+story: false
+order: 1
 intro:
   summary: While living with roommates, I wanted a simple, cross-platform solution for keeping track of grocery needs in a collaborative way. This application allows users to create groups and edit a shared checklist that's always up-to-date. Info for each item is available, so it's always clear who bought the milk this week.
   image: /assets/img/goods.jpg
