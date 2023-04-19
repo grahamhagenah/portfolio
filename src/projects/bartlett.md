@@ -3,6 +3,7 @@ layout: project.njk
 title: Working at Bartlett Interactive
 subtitle: My experience building websites for local nonprofits at a small Concord-based agency.
 tags: project
+story: true
 intro:
   summary: From June 2019 to February 2021, I worked at Bartlett Interactive, a digital agency, building websites for nonprofits in the Greater Boston area. Collaborating with designers, project managers, senior developers, and a wide variety of clients, I honed my technical skills and learned about the broader operations of the business.
   image: /assets/img/bartlett.webp
@@ -24,3 +25,5 @@ Once I was offered a full-time position at the agency, I took on several more pr
 <img class="content-img" src="/assets/img/bartlett-projects.webp" alt="">
 
 Some other clients I worked for include the Charlotte & William Bloomberg Medford Public Library, Lucius Beebe Memorial Library, Brookline Arts Center, Somerville Public Library, Brookline Innovation Fund, Cognoa, Go Healthcare Staffing, and Northeast Energy Efficiency Partnership — organizations that I felt were making a positive impact on public health and education, and I’m proud to have made my own contributions to get them onto the web.
+
+I can’t overstate the importance of my time at Bartlett Interactive. I began with little real-world development experience, and in the course of two years, cultivated a set of technical, business, collaborative, and creative expertise that laid the foundation for the rest of my career.

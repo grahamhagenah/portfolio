@@ -45,7 +45,13 @@ title: Graham Hagenah's Portfolio
         <div class="details">
           <h2 class="title">{{ post.data.title }}</h3>
           <p>{{ post.data.subtitle }}</p>
-          <p class="read-more">View Project</p>
+          <p class="read-more">
+            {% if post.data.story %}
+              Read Story
+            {% else %}
+              View Project
+            {% endif %}
+          </p>
           <span class="arrow">›</span>
         </div>
       </a>

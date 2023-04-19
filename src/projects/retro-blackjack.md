@@ -3,6 +3,7 @@ layout: project.njk
 title: Retro Blackjack
 subtitle: A minimalist blackjack game inspired by the classic handheld version from the early 90's.
 tags: project
+story: false
 intro:
   summary: Retro Blackjack is an application inspired by the classic version from the early 90’s - an attempt to capture the charm and simplicity of the original game.
   image: /assets/img/blackjack.jpeg
