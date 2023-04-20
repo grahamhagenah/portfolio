@@ -12,6 +12,17 @@ module.exports = function(eleventyConfig) {
 		]
 	});
 
+	// Allow mardown in front matter
+	const md = require("markdown-it")({
+		html: false,
+		breaks: true,
+		linkify: true,
+	});
+
+	eleventyConfig.addNunjucksFilter("markdownify", (markdownString) =>
+		md.render(markdownString)
+	);
+
   // Image plugin
 	eleventyConfig.addPlugin(eleventyImagePlugin, {
 		// Set global default options
@@ -34,7 +45,6 @@ module.exports = function(eleventyConfig) {
       });
     return projects;
   });
-
 
   // Copy `src/style.css` to `_site/style.css`
   eleventyConfig.addPassthroughCopy("src/style.css");

@@ -6,7 +6,7 @@ html {
 
 :root {
   --black: #2E2E2E;
-  --grey: #797979;
+  --grey: #575757;
 }
 
 body {
@@ -257,12 +257,30 @@ figure {
   background-color: #f7f5f7;
 }
 
-#projects a {
-  text-decoration: none;
-}
-
 a:hover .read-more {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.read-more {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+  margin-top: 0rem;
+  text-decoration-color: #c7c7c7;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+#projects a,
+.project-description a {
+  text-decoration: none;
+  text-decoration: none; 
+  min-width: 150px;
+  display: inline-block;
 }
 
 #projects .project-image-wrapper:hover {
@@ -287,15 +305,6 @@ a .project-image-wrapper {
   line-height: 1.5;
 }
 
-.read-more {
-  display: inline;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline;
-}
-
 body a:hover .arrow {
   padding-left: 5px;
   transition: .5s;
@@ -307,7 +316,7 @@ body a:hover .arrow {
 }
 
 blockquote {
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 5rem 2rem 1rem 2rem;
   border-left: 4px solid #82e9ff;
   margin: 6rem 0;
   background-color: #eefcff;
@@ -315,7 +324,7 @@ blockquote {
   background-repeat: no-repeat;
   background-position-x: 2rem;
   background-position-y: 1rem;
-  background-size: 4rem;
+  background-size: 3rem;
   font-style: italic;
 }
 

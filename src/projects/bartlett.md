@@ -5,8 +5,9 @@ subtitle: My experience building websites for local nonprofits at a small Concor
 tags: project
 story: true
 order: 4
+company: https://www.bartlettinteractive.com
 intro:
-  summary: From June 2019 to February 2021, I worked at Bartlett Interactive, a digital agency, building websites for nonprofits in the Greater Boston area. Collaborating with designers, project managers, senior developers, and a wide variety of clients, I honed my technical skills and learned about the broader operations of the business.
+  summary: From *June 2019 to February 2021*, I worked at Bartlett Interactive, a digital agency, building websites for nonprofits in the Greater Boston area. Collaborating with designers, project managers, senior developers, and a wide variety of clients, I honed my technical skills and learned about the broader operations of the business.
   image: /assets/img/bartlett-preview.webp
   preview: /assets/img/bartlett-preview.webp
   alt: ""
@@ -18,12 +19,19 @@ My first day on the job, I shadowed our eponymous founder as he pitched digital 
 
 Over the next few weeks, I worked closely with the directors and volunteers to design and build a new website with a bespoke WordPress theme, tuned to their needs and specifications. They were pleased with the final product:
 
-> The resulting website is so easy to use - both for people visiting the site and for us to keep the content up to date. We are so pleased with our new website, and editing it has been a pleasure! We are still getting rave reviews about the great new design from teachers and donors who use the site.
+
+> "The resulting website is so easy to use - both for people visiting the site and for us to keep the content up to date. We are so pleased with our new website, and editing it has been a pleasure! We are still getting rave reviews about the great new design from teachers and donors who use the site."
+> 
+> — **Brenda Sullivan**, Associate Director, Brookline Education Foundation
 
 Once I was offered a full-time position at the agency, I took on several more projects and additional responsibilities. To keep costs low and reduce overhead, I began managing my own projects, learning to pitch my own capabilities to prospective clients, forge relationships with key stakeholders, create action plans, estimate costs, and launch products on time and under-budget. I was a developer first and foremost, but eager to hone my business skills along the way.
 
 <img class="content-img" src="/assets/img/bartlett-projects.webp" alt="">
 
 Some other clients I worked for include the Charlotte & William Bloomberg Medford Public Library, Lucius Beebe Memorial Library, Brookline Arts Center, Somerville Public Library, Brookline Innovation Fund, Cognoa, Go Healthcare Staffing, and Northeast Energy Efficiency Partnership — organizations that I felt were making a positive impact on public health and education, and I’m proud to have made my own contributions to get them onto the web.
+
+> "I’m thrilled how my website turned out. Working with Graham was a real pleasure. He is an exceptionally good listener and designer. And most importantly to me, he is a wonderful teacher."
+> 
+> — **Linda Booth Sweeney**, Award-Winning Author & Educator
 
 I can’t overstate the importance of my time at Bartlett Interactive. I began with little real-world development experience, and in the course of two years, cultivated a set of technical, business, collaborative, and creative expertise that laid the foundation for the rest of my career.

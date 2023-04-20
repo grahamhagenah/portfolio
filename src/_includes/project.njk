@@ -5,8 +5,25 @@ title: Project Layout
 
 <main class="project-description">
   <h1>{{title}}</h1>
-  <p class="summary-tag">Summary</p>
-  <p>{{intro.summary}}</p>
+  <p>{{ intro.summary | markdownify | safe }}</p>
+  {% if source %}
+    <a href="{{ source }}" target="_blank">
+      <p class="read-more">Source Code</p>
+      <span class="arrow">›</span>
+    </a>
+  {% endif %}
+  {% if live %}
+    <a href="{{ live }}" target="_blank">
+      <p class="read-more">Live Site</p> 
+      <span class="arrow">›</span>
+    </a>
+  {% endif %}
+  {% if company %}
+    <a href="{{ company }}" target="_blank">
+      <p class="read-more">Company Website</p>
+      <span class="arrow">›</span>
+    </a>
+  {% endif %}
   <figure>
     <img class="browser" src="/assets/img/browser.svg" alt="" />
     <img class="project-image" src={{intro.image}} aria-label="Project preview" alt={{intro.alt}} />
