@@ -275,6 +275,22 @@ a:hover .read-more {
   text-decoration-thickness: 2px;
 }
 
+.tags li {
+  display: inline;
+  border: 2px solid var(--grey);
+  color: var(--grey);
+  border-radius: 20px;
+  padding: 4px 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* .tags li::before {
+  content: '#';
+} */
+
 #projects a,
 .project-description a {
   text-decoration: none;

@@ -5,6 +5,12 @@ title: Project Layout
 
 <main class="project-description">
   <h1>{{title}}</h1>
+  {# <p class="tags"> {{ tags }}</p> #}
+  <ul class="tags">
+    {% for item in stack %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
   <p>{{ intro.summary | markdownify | safe }}</p>
   {% if source %}
     <a href="{{ source }}" target="_blank">

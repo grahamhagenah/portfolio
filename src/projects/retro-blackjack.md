@@ -5,6 +5,7 @@ subtitle: A minimalist blackjack game inspired by the classic handheld version f
 tags: project
 story: false
 order: 5
+stack: ['react', 'netlify']
 live: https://blackjack.grahamhagenah.com
 source: https://github.com/grahamhagenah/blackjack
 intro:

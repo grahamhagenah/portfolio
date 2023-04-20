@@ -5,6 +5,7 @@ subtitle: A full-stack, collaborative checklist application built with Remix.
 tags: project
 story: false
 order: 1
+stack: ['remix', 'react', 'fly.io']
 live: https://goods.fly.dev
 source: https://github.com/grahamhagenah/goods
 intro:
