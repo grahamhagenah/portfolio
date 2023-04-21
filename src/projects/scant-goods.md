@@ -94,14 +94,14 @@ Finally, I wrote an action in a form to mutate the data, marking an item as eith
 ...
 ```
 
-Data flows from the database through a loader, into a compoenent, where it can be mutated by an action that sends the updated data back to the database. The flow of data is cyclical in Remix, ensuring a close bond between the server and the client.
+Data flows from the database through a loader into a component. Actions mutate the data, then ask the database to make an update. Data flow is cyclical in Remix, ensuring a close bond between the server and the client.
 
-## User-Experience and Capabilities 
+## User-Experience and Capabilities
 
-When users register an account on the app, a function creates a new group in the database with the new user as its only member. It's easy to change the group name, add users, or join a different group from the settings page.
+When users register an account on the app, a function creates a new group in the database with the new user as its only member. Changing the group name, adding users, or joining a different group from the settings page is easy.
 
-When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged to the database and synchronized with the front-end for all users. 
+When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front-end for all users.
 
-Selecting the ellipsis menu provides information on which user was the last to interact with a particular item, and when the change was made - so it's always clear who bought the butter this week.
+Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change - so it's always clear who bought the butter this week.
 
 <img class="content-img" src="/assets/img/goods-mobile.webp" alt="">

@@ -153,11 +153,11 @@
           <span class="token punctuation">/></span></span><span class="token plain-text">
 ...
 </span></code></pre>
-<p>Data flows from the database through a loader, into a compoenent, where it can be mutated by an action send the updated data back into the database. The flow of data is cyclical in Remix, ensuring a close bond between the server and the client.</p>
+<p>Data flows from the database through a loader into a component. Actions mutate the data, then ask the database to make an update. Data flow is cyclical in Remix, ensuring a close bond between the server and the client.</p>
 <h2>User-Experience and Capabilities</h2>
-<p>When users register an account on the app, a function creates a new group in the database with the new user as its only member. It's easy to change the group name, add users, or join a different group from the settings page.</p>
-<p>When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged to the database and synchronized with the front-end for all users.</p>
-<p>Selecting the ellipsis menu provides information on which user was the last to interact with a particular item, and when the change was made - so it's always clear who bought the butter this week.</p>
+<p>When users register an account on the app, a function creates a new group in the database with the new user as its only member. Changing the group name, adding users, or joining a different group from the settings page is easy.</p>
+<p>When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front-end for all users.</p>
+<p>Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change - so it's always clear who bought the butter this week.</p>
 <img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
 
 </main>

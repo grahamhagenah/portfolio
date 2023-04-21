@@ -1,7 +1,7 @@
 ---
 layout: project.njk
 title: Retro Blackjack
-subtitle: A minimalist blackjack game inspired by the classic handheld version from the early 90's.
+subtitle: Minimalist React-based application inspired by the classic handheld game from the early 90’s.
 tags: project
 story: false
 order: 5
@@ -9,7 +9,7 @@ stack: ['react', 'netlify']
 live: https://blackjack.grahamhagenah.com
 source: https://github.com/grahamhagenah/blackjack
 intro:
-  summary: This is a minimalist React-based application inspired by the classic handheld game from the early 90’s. My goal was to capture the charm and simplicity of the original version to play on the web.
+  summary: Minimalist React-based application inspired by the classic handheld game from the early 90’s. My goal was to capture the charm and simplicity of the original version to play on the web.
   image: /assets/img/blackjack.jpeg
   preview: /assets/img/blackjack-preview.jpg
   alt: ""
