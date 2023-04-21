@@ -19,6 +19,10 @@ module.exports = function(eleventyConfig) {
 		linkify: true,
 	});
 
+	const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+	
+	eleventyConfig.addPlugin(syntaxHighlight);
+
 	eleventyConfig.addNunjucksFilter("markdownify", (markdownString) =>
 		md.render(markdownString)
 	);

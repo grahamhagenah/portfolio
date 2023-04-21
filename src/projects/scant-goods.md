@@ -9,12 +9,99 @@ stack: ['remix', 'react', 'fly.io']
 live: https://goods.fly.dev
 source: https://github.com/grahamhagenah/goods
 intro:
-  summary: While living with roommates, I wanted a simple, cross-platform solution for keeping track of grocery needs in a collaborative way. This application allows users to create groups and edit a shared checklist that's always up-to-date. Info for each item is available, so it's always clear who bought the milk this week.
+  summary: Built with the full-stack React framework, Remix, this application allows users to create groups edit a collaborative checklist that's always up-to-date.
   image: /assets/img/goods.jpg
   preview: /assets/img/goods-preview.webp
   alt: ""
 ---
 
-## Stack Description
+## Introduction to Remix
 
-Remix provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it felt empowering to be in control of the full-stack. Remix makes it easy to interact with the server to get data into components. I didn't have to worry about keeping client-side state in sync with the server. By setting state with mutations, the loaders take over to refetch the most up-to-date data and make updates to your component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.
+<a href="https://remix.run/" target="_blank">Remix</a> provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it was empowering to be in control of the full-stack. Remix makes it easy to interact with the server to get data into components. I didn't have to worry about keeping client-side state in sync with the server. By setting state with mutations, the loaders take over to refetch the most up-to-date data and make updates to your component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.
+
+## How Data Flows in Remix
+
+A key concept that I grappled with was data flow, how it differs from approaches I've used in the past, and the innovative possibilities it enables. It took some experimentation to understand the relationship between <em>Loaders</em>, <em>Components</em>, and <em>Actions</em>, but once I got it working I was able to synchronize data across the newtork, client-side and server-side.
+
+In this case, the loader returns an array of all the <em>complete</em> and <em>incomplete</em> items associated with a particular group. 
+
+```js
+export async function loader({ request }: LoaderArgs) {
+  const userId = await requireUserId(request);
+  const user = await getUserById(userId);
+  const groupId = await user.groupId
+  const allIncompleteGoods = await getAllIncompleteGoods({ groupId });
+  const allCompleteGoods = await getAllCompleteGoods({ groupId });
+
+  return json({ userId, allIncompleteGoods, allCompleteGoods, user, groupId });
+}
+```
+
+The list of items is loaded into a component.
+
+```jsx
+...
+
+  const data = useLoaderData<typeof loader>();
+  
+  return (
+      <main>
+        <details className="incomplete-goods">
+          <summary>
+            <h2>Incomplete</h2>
+            <span className="counter">{data.allIncompleteGoods.length}</span>
+          </summary>
+          <ol>
+            data.allIncompleteGoods.map((good) => 
+              <GoodItem key={good.id} good={good} />
+            )
+          </ol>
+        </details>
+  ...
+```
+
+Finally, I wrote an action in a form to mutate the data, marking an item as either complete or incomplete depending on its current state. The data is optimistically updated in the component, which means the UI is updated to reflect the expected changes to the data. Then, the database is updated to synchronize with the client-side.
+
+```jsx
+...
+
+  const checked = fetcher.submission
+    ? // optimistic version
+      Boolean(fetcher.submission.formData.get("checked"))
+    : // normal version
+    good.completed || false;
+
+ const actionValue = checked ? "restore" : "complete";
+
+  function handleUpdate() {
+    setSubmitting(true)
+    setTimeout(() => {
+      setSubmitting(false)
+    }, 1000)
+  }
+
+  return (
+    <fetcher.Form method="post" onSubmit={handleUpdate}>
+        <input type="hidden" name="id" value={good.id}></input>
+        <label className="form-control">
+          <input
+            type="checkbox"
+            name="_action"
+            value={actionValue}
+            checked={checked}
+            onChange={(e) => fetcher.submit(e.target.form)}
+          />
+...
+```
+
+Data flows from the database through a loader, into a compoenent, where it can be mutated by an action send the updated data back into the database. The flow of data is cyclical in Remix, ensuring a close bond between the server and the client.
+
+## User-Experience and Capabilities 
+
+When users register an account on the app, a function creates a new group in the database with the new user as its only member. It's easy to change the group name, add users, or join a different group from the settings page.
+
+When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged to the database and synchronized with the front-end for all users. 
+
+Selecting the ellipsis menu provides information on which user was the last to interact with a particular item, and when the change was made - so it's always clear who bought the butter this week.
+
+<img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
