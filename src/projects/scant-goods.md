@@ -17,13 +17,13 @@ intro:
 
 ## Introduction to Remix
 
-<a href="https://remix.run/" target="_blank">Remix</a> provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it was empowering to be in control of the full-stack. Remix makes it easy to interact with the server to get data into components. I didn't have to worry about keeping client-side state in sync with the server. By setting state with mutations, the loaders take over to refetch the most up-to-date data and make updates to your component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.
+<a href="https://remix.run/" target="_blank">Remix</a> provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it was empowering to be in control of the full stack. Remix makes interacting with the server to get data into components easy. I didn't have to worry about keeping the client-side state in sync with the server. By setting the state with mutations, the loaders take over to fetch the most up-to-date data and make updates to the component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.
 
 ## How Data Flows in Remix
 
-A key concept that I grappled with was data flow, how it differs from approaches I've used in the past, and the innovative possibilities it enables. It took some experimentation to understand the relationship between <em>Loaders</em>, <em>Components</em>, and <em>Actions</em>, but once I got it working I was able to synchronize data across the newtork, client-side and server-side.
+A critical concept that I grappled with was data flow, how it differs from approaches I've used in the past, and the innovative possibilities it enables. It took some experimentation to understand the relationship between <em>Loaders</em>, <em>Components</em>, and <em>Actions</em>, but once I got it working, I was able to synchronize data across the network, client-side and server-side.
 
-In this case, the loader returns an array of all the <em>complete</em> and <em>incomplete</em> items associated with a particular group. 
+In this case, the loader returns an array of all the <em>complete</em> and <em>incomplete</em> items associated with a particular group.
 
 ```js
 export async function loader({ request }: LoaderArgs) {
@@ -60,7 +60,7 @@ The list of items is loaded into a component.
   ...
 ```
 
-Finally, I wrote an action in a form to mutate the data, marking an item as either complete or incomplete depending on its current state. The data is optimistically updated in the component, which means the UI is updated to reflect the expected changes to the data. Then, the database is updated to synchronize with the client-side.
+Finally, I wrote an action in a form to mutate the data, marking an item as either complete or incomplete, depending on its current state. The action optimistically updates the data in the component, which means the UI is updated to reflect the expected changes to the data. Then, the database is updated to synchronize with the client side.
 
 ```jsx
 ...
