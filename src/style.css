@@ -153,6 +153,15 @@ nav ul {
   display: inline-block;
 }
 
+.error-message {
+  background-color: rgb(255, 231, 231);
+  border: 2px solid rgb(255, 62, 62);
+  padding: 2rem;
+  border-radius: 10px;
+  color: rgb(255, 62, 62);
+  font-weight: 500;
+}
+
 .summary-tag {
   text-transform: uppercase;
   font-size: 12px;
