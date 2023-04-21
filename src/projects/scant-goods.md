@@ -94,7 +94,7 @@ Finally, I wrote an action in a form to mutate the data, marking an item as eith
 ...
 ```
 
-Data flows from the database through a loader, into a compoenent, where it can be mutated by an action send the updated data back into the database. The flow of data is cyclical in Remix, ensuring a close bond between the server and the client.
+Data flows from the database through a loader, into a compoenent, where it can be mutated by an action that sends the updated data back to the database. The flow of data is cyclical in Remix, ensuring a close bond between the server and the client.
 
 ## User-Experience and Capabilities 
 
