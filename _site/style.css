@@ -297,18 +297,6 @@ a:hover .read-more {
   letter-spacing: 0.5px;
 }
 
-pre code {
-  display: block;
-  background-color: #f7f7f7;
-  white-space: pre;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-  max-width: 100%;
-  min-width: 100px;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
 #projects a,
 .project-introduction a {
   text-decoration: none;
@@ -366,11 +354,11 @@ blockquote {
 
 code[class*="language-"],
 pre[class*="language-"] {
+  font-size: 16px;
 	color: #f8f8f2;
 	background: none;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -386,6 +374,13 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+}
+
+p code {
+  background-color: #e6e6e6;
+  color: #000000;
+  padding: 2px 3px;
+  border-radius: 2px;
 }
 
 /* Code blocks */
