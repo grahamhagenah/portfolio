@@ -50,3 +50,9 @@ To gate the virtual conference, I worked closely with a backend developer who cr
 The virtual conference successfully broadcast the event to over 500 people worldwide who couldn't attend the event in person. Registrants could view the agenda for the day, swap between several pre-recorded video feeds without leaving the page, and network with other attendees in real-time - an essential component of a work conference.
 
 I was ecstatic to put my knowledge of React to the test, grateful that my supervisors would entrust me with the task, and relieved that the day went by without a hitch.
+
+## Layoffs
+
+In August 2022, The Predictive Index laid off 15% of its workforce to cut operating costs while facing a potential recession and rising interest rates - I was, unfortunately, a part of that cohort who lost their jobs. I was initially shocked, worried, and saddened by the sudden end of my role at the company and the connections I made there. I thought I was safe. I didn't know what to do next.
+
+Within a few weeks, however, I began to see it as an opportunity to rest and reset. I lived in California then, far away from my friends and family in Massachusetts. I moved back to the East Coast, back to the outrageous weather and my familiar stomping grounds, deciding to start the next part of my career in New York.
