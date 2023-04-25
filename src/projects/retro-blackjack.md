@@ -15,9 +15,9 @@ intro:
   alt: ""
 ---
 
-## Building Mental Models
+## Building a Mental Model of React
 
-I started this project to gain experience building an interactive, client-side application in React. I learn best when I switch between discovering new concepts and applying the knowledge practically. I've found that growth is not as linear as one would expect; a more realistic path resembles a circle in which the student initially struggles with unfamiliar material, experiments with concepts, builds a mental model, hones expertise in a subject, revises their mental model, and expands their reach to the next set of unfamiliar concepts.
+I started this project to gain experience building an interactive, client-side application in React. I learn best when I switch between discovering new concepts and applying the knowledge practically. I've found that growth is not as linear as one would expect; a more realistic path resembles a circle where I initially struggle with unfamiliar material, experiment with concepts, build a mental model, hone expertise in a subject, revise my mental model, and expand my reach to the next set of unfamiliar concepts.
 
 Reading documentation, following tutorials, and seeking guidance from mentors is an essential part of the process. Still, I've found that tackling problems head-on with just-in-time learning is the most effective way to learn something new.
 

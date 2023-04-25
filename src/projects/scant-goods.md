@@ -10,7 +10,7 @@ live: https://goods.fly.dev
 source: https://github.com/grahamhagenah/goods
 intro:
   summary: Built with the full-stack React framework, Remix, this application allows users to create groups edit a collaborative checklist that's always up-to-date.
-  image: /assets/img/goods.jpg
+  image: /assets/img/goods.webp
   preview: /assets/img/goods-preview.webp
   alt: ""
 ---
