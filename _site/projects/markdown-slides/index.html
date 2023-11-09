@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Graham Hagenah's Web Portfolio">
+  <meta name="keywords" content="Developer, Portfolio, HTML, CSS, JavaScript, Front-end">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Markdown Slides</title>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ3JP57XNC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJ3JP57XNC');
+</script>
+
+<body>
+  <nav>
+    <a href="/">
+      <img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" />
+    </a>
+    <ul>
+      <li>
+        <a href="/blog">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      </li>
+            <li>
+        <a target="_blank" href="/assets/docs/GrahamHagenah.pdf">
+          Resume
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+<main class="project-description">
+  <div class="project-introduction">
+    <h1>Markdown Slides</h1>
+    <ul class="tags">
+      
+        <li>react</li>
+      
+        <li>netlify</li>
+      
+    </ul>
+    <p><p>This web app is a work-in-progress, but will be finished soon. You may view the live site or read the code as I build it out.</p>
+</p>
+    
+      <a href="https://github.com/grahamhagenah/markdown-slides" target="_blank">
+        <p class="read-more">Source Code</p>
+        <span class="arrow">›</span>
+      </a>
+    
+    
+      <a href="https://slides.grahamhagenah.com" target="_blank">
+        <p class="read-more">Live Site</p> 
+        <span class="arrow">›</span>
+      </a>
+    
+    
+  </div>
+  <figure>
+    <img class="browser" src="/assets/img/browser.svg" alt="" />
+    <img class="project-image" src=/assets/img/markdown.webp  aria-label="Project preview" alt= />
+    </div>
+    </div>
+  </figure>
+  <h2>How It Works</h2>
+<p>Markdown Slides is a markdown editor at its core, using features and APIs from the <a href="https://www.npmjs.com/package/react-markdown-editor-lite">react-markdown-editor-lite</a> npm package. With help from a parser, I wrote code to extract markdown from the editor and split the text into distinct slides in a deck. Slides are defined using headers, and users can swap between the slides using the legend in the left-most column.</p>
+<h2>Future Updates</h2>
+<p>For now, the only way to swap between slides is to select headings from the legend. I’ll be implementing slide controls and full-screen previews to enable the basics of a presentation tool.</p>
+
+</main>
+  <footer>
+    <p><span>Developed by Graham Hagenah.</span><span>Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>.</span><span>Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>.</span><span>Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.<span></p>
+  </footer>
+</body>
+</html>
