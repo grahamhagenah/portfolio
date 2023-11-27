@@ -76,7 +76,7 @@
         <li>netlify</li>
       
     </ul>
-    <p><p>This web app is a work-in-progress, but will be finished soon. You may view the live site or read the code as I build it out.</p>
+    <p><p>A markdown presentation editor, built in React, for drafting, displaying, and sharing simple presentations.</p>
 </p>
     
       <a href="https://github.com/grahamhagenah/markdown-slides" target="_blank">
@@ -95,13 +95,21 @@
   <figure>
     <img class="browser" src="/assets/img/browser.svg" alt="" />
     <img class="project-image" src=/assets/img/markdown.webp  aria-label="Project preview" alt= />
-    </div>
-    </div>
   </figure>
   <h2>How It Works</h2>
-<p>Markdown Slides is a markdown editor at its core, using features and APIs from the <a href="https://www.npmjs.com/package/react-markdown-editor-lite">react-markdown-editor-lite</a> npm package. With help from a parser, I wrote code to extract markdown from the editor and split the text into distinct slides in a deck. Slides are defined using headers, and users can swap between the slides using the legend in the left-most column.</p>
+<p>Markdown Slides is a markdown editor at its core, using features and APIs from the <a href="https://www.npmjs.com/package/react-markdown-editor-lite">react-markdown-editor-lite</a> npm package. With help from a parser, I wrote code to extract Markdown from the editor and split the text into distinct slides in a deck. Slides are defined using headers, and the controls allow users to navigate between slides, enable a distraction-free fullscreen mode, and toggle between dark and light themes.</p>
+<p>After some initial user feedback (comments from friends), I added a demo slide deck to the app, which is always the first thing to load. The demo provides an immediate example that introduces the fundamentals of Markdown syntax to those who are unfamiliar. Everything from italic text to tabular data is covered. The demo also explains the simple process of creating and editing new slides and gives users something to play around with when they first show up.</p>
+<p>I load the demo markdown variable into the editor after the initial render and initialize the current slide.</p>
+<pre class="language-jsx"><code class="language-jsx">  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    mdEditor<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>demo<span class="token punctuation">)</span>
+    <span class="token function">setCurrent</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The <code>setText</code> API triggers an <em>onchange</em> event that runs the text through a markdown parser and passes the output to a function that reads through each line of text, creating an array of slides based on the location of headers. React saves the array as state and it becomes the content of the slide deck. Every time the user makes a change, the app re-renders, updating the content and deleting or creating slides.</p>
 <h2>Future Updates</h2>
-<p>For now, the only way to swap between slides is to select headings from the legend. I’ll be implementing slide controls and full-screen previews to enable the basics of a presentation tool.</p>
+<p>For now, the app requires users to save markdown files to their computer if they want to save side decks. I'd like to implemenet a backend with Remix in the future to allow users to save their slides or share presentations links with others.</p>
+<p>Users will want more options to format and style their slide decks. I want to add functionality for parsing frontmatter to allow users to set background colors, typefaces, and custom themes.</p>
+<p>I'm also interested in exploring the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and Drop API</a> to allow users to click-and-drag slides to change their order in the deck. Currently, users need to manually copy and paste text from the editor to change the order of slides. I could implement a feature in which the content of slides is automatically identified and moved in the Markdown editor to reflect the interface view.</p>
+<p>Furthermore, it would be nice to hide the Markdown editor and edit the slides directly through the interface, more closely resembling the workflow of PowerPoint and Keynote while still retaining Markdown's portability and non-proprietary nature.</p>
 
 </main>
   <footer>
