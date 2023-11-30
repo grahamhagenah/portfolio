@@ -528,10 +528,3 @@ pre[class*="language-"] {
     margin: 0rem auto;
   }
 }
-
-/* Ensure no FOUC */
-
-html {
-  visibility: visible;
-  opacity: 1;
-}
