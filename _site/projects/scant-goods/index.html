@@ -76,7 +76,7 @@
         <li>fly.io</li>
       
     </ul>
-    <p><p>Built with the full-stack React framework, Remix, this application allows users to create groups edit a collaborative checklist that's always up-to-date.</p>
+    <p><p>Built with the full-stack framework Remix, this application allows users to create collaborative checklists that are always up-to-date.</p>
 </p>
     
       <a href="https://github.com/grahamhagenah/goods" target="_blank">
@@ -96,7 +96,14 @@
     <img class="browser" src="/assets/img/browser.svg" alt="" />
     <img class="project-image" src=/assets/img/goods.webp  aria-label="Project preview" alt= />
   </figure>
-  <h2>Introduction to Remix</h2>
+  <h2>User-Experience and Capabilities</h2>
+<p>The concept behind Scant Goods is to provide users with a way to share and track a  list of incomplete items - in this case, goods that are in short supply. I intended the app to be a shared grocery list, but it can work as a general project management tool.</p>
+<p>When a user registers an account on the app, a function creates a new group in the database with the new user as its only member. Users can change the group name from the settings page, add or remove users, or swap into a new group.</p>
+<p>When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front end for all users.</p>
+<p>Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change.</p>
+<p>The capabilities of this app are made possible by the full-stack framework Remix, a project from the team that created React Router.</p>
+<img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
+<h2>Introduction to Remix</h2>
 <p><a href="https://remix.run/" target="_blank">Remix</a> provides a powerful and efficient platform for building full-stack applications, with a focus on developer productivity, code quality, performance, security, and testing. As someone who primarily works with JavaScript and front-end technologies, it was empowering to be in control of the full stack. Remix makes interacting with the server to get data into components easy. I didn't have to worry about keeping the client-side state in sync with the server. By setting the state with mutations, the loaders take over to fetch the most up-to-date data and make updates to the component views. Remix is a perfect tool for applications with highly interactive user interfaces like this one.</p>
 <h2>How Data Flows in Remix</h2>
 <p>A critical concept that I grappled with was data flow, how it differs from approaches I've used in the past, and the innovative possibilities it enables. It took some experimentation to understand the relationship between <em>Loaders</em>, <em>Components</em>, and <em>Actions</em>, but once I got it working, I was able to synchronize data across the network, client-side and server-side.</p>
@@ -162,11 +169,6 @@
 ...
 </span></code></pre>
 <p>Data flows from the database through a loader into a component. Actions mutate the data, then ask the database to make an update. Data flow is cyclical in Remix, ensuring a close bond between the server and the client.</p>
-<h2>User-Experience and Capabilities</h2>
-<p>When users register an account on the app, a function creates a new group in the database with the new user as its only member. Changing the group name, adding users, or joining a different group from the settings page is easy.</p>
-<p>When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front-end for all users.</p>
-<p>Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change - so it's always clear who bought the butter this week.</p>
-<img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
 
 </main>
   <footer>

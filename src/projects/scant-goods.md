@@ -9,11 +9,25 @@ stack: ['remix', 'react', 'fly.io']
 live: https://goods.fly.dev
 source: https://github.com/grahamhagenah/goods
 intro:
-  summary: Built with the full-stack React framework, Remix, this application allows users to create groups edit a collaborative checklist that's always up-to-date.
+  summary: Built with the full-stack framework Remix, this application allows users to create collaborative checklists that are always up-to-date.
   image: /assets/img/goods.webp
   preview: /assets/img/goods-preview.webp
   alt: ""
 ---
+
+## User-Experience and Capabilities
+
+The concept behind Scant Goods is to provide users with a way to share and track a  list of incomplete items - in this case, goods that are in short supply. I intended the app to be a shared grocery list, but it can work as a general project management tool.
+
+When a user registers an account on the app, a function creates a new group in the database with the new user as its only member. Users can change the group name from the settings page, add or remove users, or swap into a new group.
+
+When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front end for all users.
+
+Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change.
+
+The capabilities of this app are made possible by the full-stack framework Remix, a project from the team that created React Router.
+
+<img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
 
 ## Introduction to Remix
 
@@ -95,13 +109,3 @@ Finally, I wrote an action in a form to mutate the data, marking an item as eith
 ```
 
 Data flows from the database through a loader into a component. Actions mutate the data, then ask the database to make an update. Data flow is cyclical in Remix, ensuring a close bond between the server and the client.
-
-## User-Experience and Capabilities
-
-When users register an account on the app, a function creates a new group in the database with the new user as its only member. Changing the group name, adding users, or joining a different group from the settings page is easy.
-
-When users are in the same group, they can view and edit a shared checklist. New items and mutations to existing items are logged into the database and synchronized with the front-end for all users.
-
-Selecting the ellipsis menu provides information on which user was the last to interact with a particular item and when they made the change - so it's always clear who bought the butter this week.
-
-<img class="content-img" src="/assets/img/goods-mobile.webp" alt="">
