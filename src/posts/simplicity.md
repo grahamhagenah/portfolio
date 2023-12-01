@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Thinking Long-Term for My Personal Website
-subtitle:
+subtitle: Migrating my portfolio to a static site generator for long-term stability.
 tags: blog
 intro:
   summary: I migrated my portfolio website to a static site generator for long-term stability.
