@@ -25,16 +25,17 @@ body {
   color: #a2a2a2;
   font-weight: 500;
   padding: 1rem 0.5rem;
+  letter-spacing: 1px;
 }
 
 #intro-button {
   display: inline-block;
-  padding: 0.25rem 2rem .25rem 1.5rem;
+  padding: 5px 1.5rem 5px 1rem;
   background-color: transparent;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 3px solid rgb(236, 236, 236);
   color: black;
-  margin: 2rem 0 0 0;
+  margin: 2.5rem 0 0 0;
   text-decoration: none;
   transition: .25s;
 }
@@ -73,7 +74,7 @@ h1,
 .project-description h1,
 .single-post h1,
 .interior-page h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.15;
   margin: 6rem 0 2rem 0;
@@ -85,6 +86,10 @@ h1,
 
 #introduction {
   margin: 6rem 0;
+}
+
+#introduction p {
+  font-size: 22px;
 }
 
 ul, ol, dl {
@@ -293,6 +298,7 @@ figure {
   border-radius: 10px;
   overflow: hidden;
   background-color: #f7f5f7;
+  height: 425px;
 }
 
 a:hover .read-more {
@@ -521,11 +527,6 @@ pre[class*="language-"] {
   #introduction {
     margin: 12rem 0;
   }
-/* 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 6rem;
-  } */
 
   .interior-page h2 {
     margin-bottom: 0rem;
