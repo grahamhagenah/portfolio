@@ -19,6 +19,14 @@ body {
   max-width: 100%;
 }
 
+.section-header {
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #a2a2a2;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+}
+
 #intro-button {
   display: inline-block;
   padding: 0.25rem 2rem .25rem 1.5rem;
@@ -253,14 +261,14 @@ footer span {
   display: block;
 }
 
-#posts {
-  list-style: none;
-  margin-top: 5rem;
+.interior-page #posts {
+  margin-top: 4rem;
 }
 
-#posts li {
-  margin-top: 5rem;
+#posts {
+  list-style: none;
 }
+
 
 #posts a {
   text-decoration: none;
@@ -513,11 +521,11 @@ pre[class*="language-"] {
   #introduction {
     margin: 12rem 0;
   }
-
+/* 
   h2 {
     font-size: 2rem;
     margin-bottom: 6rem;
-  }
+  } */
 
   .interior-page h2 {
     margin-bottom: 0rem;
@@ -557,8 +565,14 @@ pre[class*="language-"] {
     font-size: 22px;
   }
 
-  .project-image-wrapper {
+  .project-image-wrapper,
+  .blog-image-wrapper {
     height: 300px;
+  }
+
+  .blog-image {
+    height: 100%;
+    width: auto;
   }
 
   #skills {

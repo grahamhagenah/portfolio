@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>html{visibility: hidden;opacity:0;}</style>
+  
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Graham Hagenah's Web Portfolio">
+  <meta name="keywords" content="Developer, Portfolio, HTML, CSS, JavaScript, Front-end">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Thinking Long-Term for My Personal Website</title>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ3JP57XNC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QJ3JP57XNC');
+</script>
+
+<body>
+  <nav>
+    <a href="/">
+      <img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" />
+    </a>
+    <ul>
+      <li>
+        <a href="/blog">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      </li>
+            <li>
+        <a target="_blank" href="/assets/docs/GrahamHagenah.pdf">
+          Resume
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+<main class="single-post">
+  <h1>Thinking Long-Term for My Personal Website</h1>
+  <p>I migrated my portfolio website to a static site generator for long-term stability.</p>
+  <img class="content-img" src=/assets/img/simplicity.webp aria-label="Blog post image" alt= />
+  <h2>My WorkFlow Over Time</h2>
+<p>A few months ago, I migrated my portfolio website from Gatsby, a React-based framework, to Eleventy, a straightforward, Markdown-friendly static site generator. I've gone through many different technologies over the years. The first website I made in college, a portfolio for my digital illustrations, was just a barebones HTML file with an embedded style tag. There were no build steps, dependencies, or JavaScript. Just the skeletal basics of what I needed—and it was great for my purposes. If I had kept up with the minimal hosting costs, it would still be online today after ten years.</p>
+<p>From there, I grew to use more intensive development tools. I adopted CSS frameworks and pre-processors to make my stylesheets more concise and readable. I wanted databases to store and manage content, so I started using WordPress. I created repositories for my code to track progress and roll back changes. My days of drag-and-dropping files cowboy-style were finished. I wanted to customize page templates, so I learned PHP and began writing server-side scripts. I also started shipping lots of JavaScript with every page—sprinkles of interactivity that eventually swallowed up my entire website. Suddenly, my HTML was replaced by JSX, and my sites sent megabytes of JavaScript to the client.</p>
+<p>That's not to say I don't love working in React. It opened a world of possibilities for me as a developer who often works alone. Building ambitious applications with the library has granted me a better understanding of the fundamentals of the web, as well as functional programming and system architecture. But it's not always the right tool for the job. I had to use it a lot to come to that conclusion.</p>
+<p>For my portfolio site, the most straightforward path will do. I want it to be fast-loading--instantaneous. I want to be able to leave it alone for months, or even years, and not worry about maintenance. I want to serve the site locally after a period of time away and not be overwhelmed with dependency updates and security patches. I like the file structure to be clear and flat, so I don't have to dig through personal documentation and README.md to remind myself how it all works. I want it to be portable so I'm not tied into a particular framework or proprietary technology. And I want hosting to be cheap.</p>
+<h2>Back To Static Files</h2>
+<p>Eleventy gives me all this and more. After all this time, I'm back to basics, hosting static files and images with minimal JavaScript. There's a quick build step for converting Nunchucks templates into HTML, no configuration necessary, the site deploys in seconds to Netlify, and scores near-perfect Lighthouse reports. Blog posts and project pages are Markdown files with a bit of front-matter to attach metadata like preview images and tags for search engine optimization.</p>
+<p>I'm hopeful this website stands the test of time, and I can look back a decade from now, knowing I made the right decision. The tried-and-true building blocks of the web aren't going away anytime soon, so any bet on those technologies will likely pay off. I can't guarantee that an exciting tool won't appear next week that inspires me to scrap my static site generator, but that'll be a tall order.</p>
+<p>I'll see you in ten years.</p>
+
+</main>
+  <footer>
+    <p><span>Developed by Graham Hagenah.</span><span>Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>.</span><span>Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>.</span><span>Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.<span></p>
+  </footer>
+</body>
+</html>
