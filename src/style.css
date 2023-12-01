@@ -298,7 +298,7 @@ figure {
   border-radius: 10px;
   overflow: hidden;
   background-color: #f7f5f7;
-  height: 425px;
+  height: auto;
 }
 
 a:hover .read-more {
@@ -526,6 +526,10 @@ pre[class*="language-"] {
 
   #introduction {
     margin: 12rem 0;
+  }
+
+  figure {
+    height: 425;
   }
 
   .interior-page h2 {
