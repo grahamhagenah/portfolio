@@ -1,64 +1,29 @@
 ---
 layout: post.njk
-title: >
-  Gatsby to Eleventy: Choosing Simplicity For My Personal Website
+title: Thinking Long-Term for My Personal Website
 subtitle:
 tags: blog
 intro:
-  summary: I migrated my portfolio website from Gatsby, a React-based framework, to Eleventy, a simpler, markdown-friendly static-site generator, and discovered peace of mind.
+  summary: I migrated my portfolio website to a static site generator for long-term stability.
   image: /assets/img/simplicity.webp
   preview: /assets/img/simplicity.webp
   alt: ""
 ---
 
-## How I Settled On Gatsby
+## My WorkFlow Over Time
 
-I like to lean toward the more straight-forward path when I have the flexibility to develop websites using any method or framework. So long as a specific tool fulfills the needs of a project, I see value in choosing the option that relies on the least amount of [programming magic](https://en.wikipedia.org/wiki/Magic_(programming)): black-box features that I likely couldn't understand or implement myself. I'm happy to work with libraries or frameworks that abstract away complex problems - these tools offer a different kind of simplicity, but all things in moderation.
+A few months ago, I migrated my portfolio website from Gatsby, a React-based framework, to Eleventy, a straightforward, Markdown-friendly static site generator. I've gone through many different technologies over the years. The first website I made in college, a portfolio for my digital illustrations, was just a barebones HTML file with an embedded style tag. There were no build steps, dependencies, or JavaScript. Just the skeletal basics of what I needed—and it was great for my purposes. If I had kept up with the minimal hosting costs, it would still be online today after ten years.
 
-When I started building my portfolio in [Gatsby](https://www.gatsbyjs.com/), I didn't ask whether it was the right tool. I noticed the developer community's excitement around the framework and followed the common wisdom. I figured that building a complete project for myself using Gatsby would answer my questions about the framework: can I use it for freelance projects; How does it work with a headless CMS like Sanity; how much control over the content can I give to my clients; What are the points of frustration; does performance live up to my lofty expectations?
+From there, I grew to use more intensive development tools. I adopted CSS frameworks and pre-processors to make my stylesheets more concise and readable. I wanted databases to store and manage content, so I started using WordPress. I created repositories for my code to track progress and roll back changes. My days of drag-and-dropping files cowboy-style were finished. I wanted to customize page templates, so I learned PHP and began writing server-side scripts. I also started shipping lots of JavaScript with every page—sprinkles of interactivity that eventually swallowed up my entire website. Suddenly, my HTML was replaced by JSX, and my sites sent megabytes of JavaScript to the client.
 
-I can only get so much from reading a blog post about a framework's pros and cons. I have to try it for myself. I will only recommend a tool or feel comfortable criticizing an approach if I can draw from first-hand experience. So that's how I settled on using Gatsby to build out my portfolio, a low-stakes project showcasing my work history.
+That's not to say I don't love working in React. It opened a world of possibilities for me as a developer who often works alone. Building ambitious applications with the library has granted me a better understanding of the fundamentals of the web, as well as functional programming and system architecture. But it's not always the right tool for the job. I had to use it a lot to come to that conclusion.
 
-## Complexity For Its Own Sake
+For my portfolio site, the most straightforward path will do. I want it to be fast-loading--instantaneous. I want to be able to leave it alone for months, or even years, and not worry about maintenance. I want to serve the site locally after a period of time away and not be overwhelmed with dependency updates and security patches. I like the file structure to be clear and flat, so I don't have to dig through personal documentation and README.md to remind myself how it all works. I want it to be portable so I'm not tied into a particular framework or proprietary technology. And I want hosting to be cheap.
 
-Comprehensibility feels underrated in today's climate. The tides may be shifting, but I've seen many green developers building websites with overpowered tools like React to show that they can — I've fallen into this trap, desiring to impress potential employers or other developers or prove to myself that I'm fluent in the latest trends. In the past, I've taken the more convoluted approach that may be difficult to maintain, less performant, and more error-prone.
+## Back To Static Files
 
-I don't mean to say that Gatsby is always the wrong option. It's a fascinating framework with a robust and passionate community. I'll keep a close eye on it, especially now that Netlify has acquired Gatsby Inc. But I could have been a better choice for the backbone of a tiny, personal website that only I would be updating. 
+Eleventy gives me all this and more. After all this time, I'm back to basics, hosting static files and images with minimal JavaScript. There's a quick build step for converting Nunchucks templates into HTML, no configuration necessary, the site deploys in seconds to Netlify, and scores near-perfect Lighthouse reports. Blog posts and project pages are Markdown files with a bit of front-matter to attach metadata like preview images and tags for search engine optimization.
 
-I needed to be more concerned about the amount of JavaScript I was shipping to the client, asking their browsers to handle heavy render processes. I should have considered whether it was necessary to implement a CMS integration. Will the website be stable one year from now without maintenance? How about five years from now? Can I upgrade from v4 to v5 without the entire site breaking? Asking these questions before starting a project saves hours of revisions and back-tracking. 
+I'm hopeful this website stands the test of time, and I can look back a decade from now, knowing I made the right decision. The tried-and-true building blocks of the web aren't going away anytime soon, so any bet on those technologies will likely pay off. I can't guarantee that an exciting tool won't appear next week that inspires me to scrap my static site generator, but that'll be a tall order.
 
-## Dependency Hell and Technical Debt
-
-The reality is, while developing with Gatsby, I was spending an undue amount of time updating dependencies, migrating to the latest versions, scouring the web for fixes to obscure bugs, combing through the docs to get a better grasp of the platform, and implementing workarounds to remove baffling error messages. The longer I toiled on the site, the deeper I fell into technical debt. 
-
-At a certain point, I began to consider alternative solutions. After migrating my site to the latest version, dutifully updating dependencies, replacing outdated plugins, troubleshooting hot module reloading, and fixing breaking changes, I wasn't prepared for a rehydration error that appeared inexplicably in my console: 
-
-<p class="error-message">Uncaught Error: Hydration failed because the initial UI does not match what was rendered on the server.</p>
-
-I was stuck and one of many struggling with this issue. I found that it's one of the most common errors encountered with server-side rendering and static-site generators. What's frustrating is this error may only appear in the production build of the site, which makes troubleshooting a more complicated affair. As the error message alludes, the crux of the issue is the Gatsby-compiled HTML not matching the version generated by React in the browser. The user sees a flash of the page immediately replaced with freshly generated content — far from the ideal experience and defeating the point of precompiling the HTML document. React, in effect, abandons the server-generated DOM data and switches to a full client-side render.
-
-The apparent solution is to find the discrepancy between the client and the server render. Components that don't render reliably consistent data can trigger this error, as can invalid HTML or simply forgetting to add a closing tag for an element. However, the error remains challenging to detect and resolve thanks to the difference between production and development modes and the vague and indirect side-effects of this issue that obfuscate the root cause.
-
-At the time of writing, rehydration errors still plague the Gatsby community, and the discussed workarounds have significant drawbacks that defeat the purpose of using static-site generators in the first place.
-
-## Choosing Simplicity
-
-I'm not one to dwell on sunk cost. I had fun with Gatsby and learned a lot about the benefits of *Jamstack Architecture* along the way. And as a developer who cut his teeth on monolithic solutions like WordPress and Drupal, it was refreshing to try a method that decouples the front-end from the back-end.
-
-But I was ready to take it a step further — to eliminate the need for a database entirely. I yearned for a solution that evoked the early days of the web, to do away with the heavy *node_modules* directory, to return to tools that felt comprehensible, to websites that would stand the test of time. For my portoflio website, I wanted something bare-bones, light on magic, and close to the metal.
-
-Enter Eleventy, a static-site generator that bills itself as the stable, flexible, zero-config alternative to the framework rat race. It only took a few days to rewrite my site completely, and with minimal time spent in the developer docs. Everything from styling to asset management to templating with *nunjucks* was simple and intuitive compared to my experience with Gatsby. I've never felt more competent as a developer, and it felt good sticking to my bread-and-butter: HTML, CSS, and a sprinkle of JavaScript. No CMS is required; Blog posts and project pages are markdown files with a bit of front-matter to attach metadata like preview images and tags for search engine optimization.
-
-The result is a site that compiles and pushes to production almost instantaneously. What took Gatsby several minutes, Eleventy can accomplish in seconds, and without the complexity and performance hits that come with content rehydration. 
-
-<img class="content-img" src="/assets/img/build-time.webp" alt="Netlify build log showing the complete process finished in about 11 seconds">
-
-Furthermore, my content is free from the constraints of a particular technology — I'll have no trouble moving my markdown files to other services in the future. Editing content has never been faster or simpler. I finally have peace of mind and confidence that I've built a website that will continue in perpetuity, regardless of the success of individual platforms or the whims of behemoth corporations.
-
-## Right Tool, Right Context
-
-I love working in React, and I'm grateful for the opportunities it's opened and the applications the library has empowered me to create. I'm a better developer for having used React, and it's granted me a better understanding of the fundamentals of the web and programming in general. I'm also grateful for Gatsby, and I see building a complete website with the framework as a worthwhile experiment.
-
-But it's only sometimes the right tool for a given project. If your priorities are efficiency, longevity, and performance, you may want to pursue other options like Eleventy or Hugo. If React is the favored instrument of the community, it's also the most overused. When planning the build for a project, it's worth thinking about the objectives and weighing the costs for various tools, even if it means considering a tech stack you need to become more familiar with or a technology that seems less impressive or pioneering on its face.
-
-In this case, I'm choosing Eleventy and a simpler life.
+I'll see you in ten years.
