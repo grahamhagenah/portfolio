@@ -529,7 +529,7 @@ pre[class*="language-"] {
   }
 
   figure {
-    height: 425;
+    height: 425px;
   }
 
   .interior-page h2 {
@@ -539,7 +539,6 @@ pre[class*="language-"] {
   h3 {
     font-size: 1.75rem;
   }
-
 
   .project-description h1,
   .single-post h1,
