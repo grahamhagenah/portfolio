@@ -53,6 +53,9 @@ module.exports = function(eleventyConfig) {
   // Copy `src/style.css` to `_site/style.css`
   eleventyConfig.addPassthroughCopy("src/style.css");
 
+	// And copy scripts
+	eleventyConfig.addPassthroughCopy("src/bundle.js");
+
   // Copy `assets` to `_site/assets`
   eleventyConfig.addPassthroughCopy("assets");
 

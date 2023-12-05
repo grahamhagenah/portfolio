@@ -17,6 +17,25 @@ body {
   line-height: 1.75;
   margin: 3rem 1.5rem;
   max-width: 100%;
+  overflow-x: hidden;
+}
+
+.mosaic-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  gap: 24px;
+  will-change: transform;
+  width: 200vw;
+  margin-left: -50%;
+}
+
+.mosaic-item {
+  will-change: transform;
+  z-index: 2;
+  display: inline-block;
 }
 
 .section-header {
