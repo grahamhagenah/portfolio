@@ -48,15 +48,50 @@ body {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-.fade-in-up {
+.enter-up{
   opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 1s ease-in-out forwards;
+  transform: translateY(-50px);
+  animation: enterUp 1s ease-in-out forwards;
 }
 
-@keyframes fadeInUp {
+.enter-left {
+  opacity: 0;
+  transform: translate(-50px, -50px);
+  animation: enterLeft 1s ease-in-out forwards;
+}
+
+.enter-right {
+  opacity: 0;
+  transform: translate(50px, 50px);
+  animation: enterRight 1s ease-in-out forwards;
+}
+
+@keyframes enterRight {
   0% {
     opacity: 0;
+    transform: translate(50px, 50px);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0, 0);
+  }
+}
+
+@keyframes enterLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0, 0);
+  }
+}
+
+@keyframes enterUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
