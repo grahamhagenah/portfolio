@@ -368,6 +368,10 @@ footer span {
   border: 3px solid #f3f3f3;
 }
 
+.mosaic-item figure {
+  border: 3px solid #f3f3f3;
+}
+
 .dark-browser figure {
   border: 4px solid #2e2e2e;
   background-color: #2e2e2e;
