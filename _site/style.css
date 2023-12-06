@@ -43,6 +43,20 @@ body {
   max-width: 700px;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .section-header {
   text-transform: uppercase;
   font-size: 17px;
@@ -104,12 +118,10 @@ h1,
   margin: 6rem 0 2rem 0;
 }
 
-#introduction h1 {
-  margin: 0;
-}
 
 #introduction {
   margin: 6rem 0;
+  text-align: center;
 }
 
 #introduction p {
@@ -545,11 +557,12 @@ pre[class*="language-"] {
 
   h1 {
     font-size: 4.5rem;
-    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   #introduction {
-    margin: 12rem 0;
+    margin: 10rem 0 2rem 0;
   }
 
   figure {
@@ -610,9 +623,4 @@ pre[class*="language-"] {
   main {
     margin: 0rem auto;
   }
-}
-
-html {
-  visibility: visible;
-  opacity: 1;
 }

@@ -1,19 +1,20 @@
 let mosaicWrapper
 let thirdItem
-let thirdPosition = -300
-let firstPosition = -250
+let thirdPosition = -100
+let firstPosition = -100
 
 document.addEventListener('DOMContentLoaded', function() {
 
   mosaicWrapper = document.querySelector('.mosaic-wrapper')
   firstItem = document.getElementsByClassName('mosaic-item')[0]
+  secondItem = document.getElementsByClassName('mosaic-item')[0]
   thirdItem = document.getElementsByClassName('mosaic-item')[2]
 
   // Initialize starting location and scale
-  thirdItem.style.transform = `translateY(${thirdPosition}px)`
   firstItem.style.transform = `translateY(${firstPosition}px)`
+  thirdItem.style.transform = `translateY(${thirdPosition}px)`
+  
 
-  // Scroll event listener to handle the home page animation
   window.addEventListener("scroll", function() {
 
     // Calculate scroll, slow it down + reverse direction
@@ -21,16 +22,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mosaicWrapper.style.transform = `translateX(${scrollOffset}px)` 
 
-    let newThirdPosition = thirdPosition + window.scrollY
-    let newFirstPosition = firstPosition + window.scrollY
-
     calculatePosition(firstPosition, firstItem)
     calculatePosition(thirdPosition, thirdItem)
   })
-
-  function calculatePosition(startingPosition, item) {
-    let newPostion = startingPosition + window.scrollY
-    return (newPostion >= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
-  }
-
 })
+
+
+
+// Takes an initial starting position and animates to 0
+function calculatePosition(startingPosition, item) {
+  let newPostion = startingPosition + window.scrollY
+  return (newPostion >= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
+}
+
+function fadeInElement(element) {
+  // Set the initial opacity to 0 (fully transparent)
+  element.style.opacity = 0;
+
+  // Apply a CSS transition to smoothly animate the opacity change over 1 second
+  element.style.transition = "opacity 1s ease-in-out";
+
+  // Use a setTimeout to ensure that the opacity change happens after the transition is set
+  setTimeout(function() {
+    // Set the opacity to 1 (fully visible) to trigger the fade-in effect
+    element.style.opacity = 1;
+  }, 10); // Delay the opacity change slightly to allow the transition to take effect
+}
