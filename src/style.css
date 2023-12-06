@@ -4,17 +4,15 @@
   --light-grey: #c7c7c7;
 }
 
-html {
-  margin: 0 auto;
-  padding: 0;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--black);
   font-size: 18px;
   line-height: 1.75;
   margin: 1rem;
+}
+
+html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -202,7 +200,7 @@ body a:hover {
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 0;
+  margin: 1rem;
 }
 
 nav a {
@@ -635,7 +633,7 @@ pre[class*="language-"] {
 @media screen and (min-width: 40em) { 
 
   body {
-    margin: 3rem 1.5rem;
+    margin: 2rem 0;
   }
 
   .mosaic-wrapper {
@@ -662,7 +660,8 @@ pre[class*="language-"] {
   }
 
   nav {
-    margin: 1rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
   }
 
   h1 {
