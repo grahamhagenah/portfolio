@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Takes an initial starting position and animates to 0
 function calculatePosition(startingPosition, item) {
-  let newPostion = startingPosition + window.scrollY
+
+  let scrollOffset =  window.scrollY / 2
+  let newPostion = startingPosition + scrollOffset
   return (newPostion >= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
 }
 

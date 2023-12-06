@@ -38,44 +38,46 @@ title: Graham Hagenah's Portfolio
     </li>
   </ul>
 </section>
+<main>
 <h2 class="section-header">Selected Works</h2>
-<ul id="projects">
-  {% for post in collections.projects %}
-    <li>
-      <a href="{{ post.url }}">
-        <figure class="project-image-wrapper">
-          <img class="project-image" src={{post.data.intro.preview}} aria-label="Post preview" alt={{intro.alt}} />
-        </figure>
-        <div class="details">
-          <h3 class="title">{{ post.data.title }}</h3>
-          <p>{{ post.data.subtitle }}</p>
-          <p class="read-more">
-            {% if post.data.story %}
-              Read Story
-            {% else %}
-              View Project
-            {% endif %}
-          </p>
-          <span class="arrow">›</span>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-<h2 class="section-header">Blog Posts</h2>
-<ul id="posts">
-  {% for post in collections.blog %}
-    <li>
-      <a href="{{ post.url }}">
-        <figure class="blog-image-wrapper">
-          <img class="blog-image" src={{post.data.intro.preview}} aria-label="Post preview" alt={{intro.alt}} />
-        </figure>
-        <div class="details">
-          <h3 class="title">{{ post.data.title }}</h3>
-          <p class="read-more">Read Post</p>
-          <span class="arrow">›</span>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+  <ul id="projects">
+    {% for post in collections.projects %}
+      <li>
+        <a href="{{ post.url }}">
+          <figure class="project-image-wrapper">
+            <img class="project-image" src={{post.data.intro.preview}} aria-label="Post preview" alt={{intro.alt}} />
+          </figure>
+          <div class="details">
+            <h3 class="title">{{ post.data.title }}</h3>
+            <p>{{ post.data.subtitle }}</p>
+            <p class="read-more">
+              {% if post.data.story %}
+                Read Story
+              {% else %}
+                View Project
+              {% endif %}
+            </p>
+            <span class="arrow">›</span>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2 class="section-header">Blog Posts</h2>
+  <ul id="posts">
+    {% for post in collections.blog %}
+      <li>
+        <a href="{{ post.url }}">
+          <figure class="blog-image-wrapper">
+            <img class="blog-image" src={{post.data.intro.preview}} aria-label="Post preview" alt={{intro.alt}} />
+          </figure>
+          <div class="details">
+            <h3 class="title">{{ post.data.title }}</h3>
+            <p class="read-more">Read Post</p>
+            <span class="arrow">›</span>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
