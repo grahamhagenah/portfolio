@@ -2,27 +2,30 @@ let mosaicWrapper
 let thirdItem
 let thirdPosition = -100
 let firstPosition = -100
+let secondPosition = 50
 
 document.addEventListener('DOMContentLoaded', function() {
 
   mosaicWrapper = document.querySelector('.mosaic-wrapper')
   firstItem = document.getElementsByClassName('mosaic-item')[0]
-  secondItem = document.getElementsByClassName('mosaic-item')[0]
+  secondItem = document.getElementsByClassName('mosaic-item')[1]
   thirdItem = document.getElementsByClassName('mosaic-item')[2]
 
   // Initialize starting location and scale
   firstItem.style.transform = `translateY(${firstPosition}px)`
+  secondItem.style.transform = `translateY(${secondPosition}px)`
   thirdItem.style.transform = `translateY(${thirdPosition}px)`
   
 
   window.addEventListener("scroll", function() {
 
     // Calculate scroll, slow it down + reverse direction
-    let scrollOffset =  window.scrollY / -8 
+    let scrollOffset =  window.scrollY / -10
 
     mosaicWrapper.style.transform = `translateX(${scrollOffset}px)` 
 
     calculatePosition(firstPosition, firstItem)
+    calculatePosition(secondPosition, secondItem)
     calculatePosition(thirdPosition, thirdItem)
   })
 })
@@ -32,9 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // Takes an initial starting position and animates to 0
 function calculatePosition(startingPosition, item) {
 
-  let scrollOffset =  window.scrollY / 2
-  let newPostion = startingPosition + scrollOffset
-  return (newPostion >= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
+  let scrollOffset =  window.scrollY / 5
+  let newPostion
+
+  if(startingPosition < 0) {
+    newPostion = startingPosition + scrollOffset
+    return (newPostion >= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
+  }
+  else {
+    newPostion = startingPosition - scrollOffset
+    return (newPostion <= 0) ? item.style.transform = "translateY(0)" : item.style.transform = `translateY(${newPostion}px)`
+  }
+
+ 
 }
 
 function fadeInElement(element) {
