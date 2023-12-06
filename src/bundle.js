@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
   secondItem.style.transform = `translateY(${secondPosition}px)`
   thirdItem.style.transform = `translateY(${thirdPosition}px)`
   
-
   window.addEventListener("scroll", function() {
 
     // Calculate scroll, slow it down + reverse direction
@@ -28,6 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     calculatePosition(secondPosition, secondItem)
     calculatePosition(thirdPosition, thirdItem)
   })
+
+  // Resets zoom level on screen resize
+  window.addEventListener('resize', function() {
+    document.body.style.zoom = 1;
+  });
 })
 
 
