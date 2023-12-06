@@ -712,7 +712,6 @@ pre[class*="language-"] {
   .project-image-wrapper,
   .blog-image-wrapper {
     height: 300px;
-    display: flex;
     justify-content: center;
   }
 
