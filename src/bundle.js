@@ -1,10 +1,19 @@
-let mosaicWrapper
-let thirdItem
+let mosaicWrapper, thirdItem, firstItem, secondItem
 let thirdPosition = -100
 let firstPosition = -100
 let secondPosition = 50
 
+// Width: 1360, pos: -450
+// Width 1920, pos: -200
+//as screen size goes up, x pos decreases 
+// 
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Calculate scroll, slow it down + reverse direction
+  let scrollOffset =  window.scrollY / -10
+
+  let mosaicPosition = calculateTranslationValue()
 
   mosaicWrapper = document.querySelector('.mosaic-wrapper')
   firstItem = document.getElementsByClassName('mosaic-item')[0]
@@ -12,26 +21,34 @@ document.addEventListener('DOMContentLoaded', function() {
   thirdItem = document.getElementsByClassName('mosaic-item')[2]
 
   // Initialize starting location and scale
+  mosaicWrapper.style.transform = `translateX(${mosaicPosition}px)`
   firstItem.style.transform = `translateY(${firstPosition}px)`
   secondItem.style.transform = `translateY(${secondPosition}px)`
   thirdItem.style.transform = `translateY(${thirdPosition}px)`
+
+  window.addEventListener("resize", function() {
+    mosaicWrapper.style.transform = `translateX(${calculateTranslationValue() + scrollOffset}px)` 
+  })
+
+  function calculateTranslationValue() {
+    let windowWidth = window.innerWidth
+    // Formula for calculating the correct X offset
+    let translateX = (5/14) * (windowWidth) - 880
+    return translateX
+  }
   
   window.addEventListener("scroll", function() {
 
-    // Calculate scroll, slow it down + reverse direction
-    let scrollOffset =  window.scrollY / -10
+    scrollOffset =  window.scrollY / -10
 
-    mosaicWrapper.style.transform = `translateX(${scrollOffset}px)` 
+    mosaicWrapper.style.transform = `translateX(${mosaicPosition + scrollOffset}px)` 
+
+    console.log("transform" + mosaicPosition + scrollOffset)
 
     calculatePosition(firstPosition, firstItem)
     calculatePosition(secondPosition, secondItem)
     calculatePosition(thirdPosition, thirdItem)
   })
-
-  // Resets zoom level on screen resize
-  window.addEventListener('resize', function() {
-    document.body.style.zoom = 1;
-  });
 })
 
 
