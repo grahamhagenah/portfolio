@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 
-  
+  <title>Graham Hagenah&#39;s Portfolio</title>
+
   
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,34 +31,19 @@
   
   <link rel="stylesheet" href="/style.css">
 
-  <title>Graham Hagenah&#39;s Portfolio</title>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ3JP57XNC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QJ3JP57XNC');
-</script>
-
 <body>
   <nav>
-    <a href="/">
-      <img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" />
-    </a>
+    <a href="/"><img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" /></a>
     <ul>
       <li>
-        <a href="/blog">
-          Blog
-        </a>
+        <a href="/blog">Blog</a>
       </li>
       <li>
-        <a href="/about">
-          About
-        </a>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a target="_blank" href="assets/docs/GrahamHagenah.pdf">Resume</a>
       </li>
     </ul>
   </nav>
@@ -68,7 +54,7 @@
 <section id="introduction" class="enter-up">
   <p>Hello, I'm Graham.</p>
   <h1 class="slide-in">Full-Stack Developer crafting fast, inclusive web products.</h1>
-  <a id="intro-button" role="button" href="/about">
+  <a id="intro-button" class="button-outline" role="button" href="/about">
     Read more
     <span class="arrow">›</span>
   </a>
@@ -107,8 +93,9 @@
   </ul>
 </section>
 <main>
-<h2 class="section-header">Selected Works</h2>
-  <ul id="projects">
+<section id="projects">
+  <h2 class="section-header">Selected Works</h2>
+  <ul>
     
       <li>
         <a href="/projects/scant-goods/">
@@ -183,8 +170,10 @@
       </li>
     
   </ul>
+</section>
+<section id="posts">
   <h2 class="section-header">Blog Posts</h2>
-  <ul id="posts">
+  <ul>
     
       <li>
         <a href="/posts/simplicity/">

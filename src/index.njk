@@ -9,7 +9,7 @@ title: Graham Hagenah's Portfolio
 <section id="introduction" class="enter-up">
   <p>Hello, I'm Graham.</p>
   <h1 class="slide-in">Full-Stack Developer crafting fast, inclusive web products.</h1>
-  <a id="intro-button" role="button" href="/about">
+  <a id="intro-button" class="button-outline" role="button" href="/about">
     Read more
     <span class="arrow">›</span>
   </a>
@@ -48,8 +48,9 @@ title: Graham Hagenah's Portfolio
   </ul>
 </section>
 <main>
-<h2 class="section-header">Selected Works</h2>
-  <ul id="projects">
+<section id="projects">
+  <h2 class="section-header">Selected Works</h2>
+  <ul>
     {% for post in collections.projects %}
       <li>
         <a href="{{ post.url }}">
@@ -72,8 +73,10 @@ title: Graham Hagenah's Portfolio
       </li>
     {% endfor %}
   </ul>
+</section>
+<section id="posts">
   <h2 class="section-header">Blog Posts</h2>
-  <ul id="posts">
+  <ul>
     {% for post in collections.blog %}
       <li>
         <a href="{{ post.url }}">
