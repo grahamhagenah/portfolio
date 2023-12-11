@@ -21,7 +21,7 @@ title: About
   Jun 2019 - Mar 2021 / Concord, MA
 
   ## Education
-  **B.S. Multimedia Infirmatics, University of Massachusetts**
+  **B.S. Multimedia Informatics, University of Massachusetts**
   Class of 2018 / Amherst, MA
 
   ## Beyond Work
