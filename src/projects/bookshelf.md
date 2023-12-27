@@ -10,8 +10,8 @@ live: https://bookshelf-c524.fly.dev
 source: https://github.com/grahamhagenah/bookshelf
 intro:
   summary: A full-stack web app for showcasing the books you own and facilitating the exchange of books.
-  image: /assets/img/markdown.webp
-  preview: /assets/img/markdown-preview.webp
+  image: /assets/img/bookshelf.webp
+  preview: /assets/img/bookshelf-preview.webp
   alt: ""
 ---
 
