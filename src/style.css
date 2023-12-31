@@ -220,12 +220,12 @@ footer span {
 }
 
 .mobile-shadow figure {
-  border: 3px solid #f3f3f3;
+  border: 3px solid #f7f5f7;
 }
 
 .mosaic-item figure,
 .project-description figure {
-  background-color: #f3f3f3;
+  background-color: #f7f5f7;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
