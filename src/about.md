@@ -25,4 +25,4 @@ title: About
   Class of 2018 / Amherst, MA
 
   ## Beyond Work
-  You'll likely find me climbing at the rock gym, practicing yoga, reading scince fiction, or watching movies with friends. If you have any questions or want to get in touch, <a href="mailto:gwhagenah@gmail.com"> email me.</a>
+  You'll likely find me climbing at the rock gym, practicing yoga, reading science fiction, or watching movies with friends. If you have any questions or want to get in touch, <a href="mailto:gwhagenah@gmail.com"> email me.</a>
