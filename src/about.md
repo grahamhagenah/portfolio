@@ -4,7 +4,7 @@ title: About
 ---
 
   # About me
-  I'm Graham Hagenah, a full-stack web developer focused on crafting performant, accessible digital experiences for everyone. I build websites with HTML, CSS, and JavaScript, as well as front-end libraries like **React.**. If I need a content management system, I prefer **WordPress.**
+  I'm Graham Hagenah, a full-stack web developer focused on crafting performant, accessible digital experiences for everyone. I build websites with HTML, CSS, and JavaScript, as well as front-end libraries like **React**. If I need a content management system, I prefer **WordPress.**
 
   I was born and raised in the Berkshires and earned a Bachelor of Science in Multimedia Informatics from the University of Massachusetts, Amherst in 2018. The degree combined aspects of Computer Science, Studio Arts, and Marketing, laying the groundwork for my career at the intersection of art and technology.
   
