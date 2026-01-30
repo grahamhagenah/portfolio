@@ -4,21 +4,29 @@ title: About
 ---
 
   # About me
-  I'm Graham Hagenah, a full-stack web developer focused on crafting performant, accessible digital experiences for everyone. I build websites with HTML, CSS, and JavaScript, as well as front-end libraries like **React**. If I need a content management system, I prefer **WordPress.**
+  I'm Graham Hagenah, a full-stack web developer who builds fast, accessible, content‑friendly websites. I work across HTML, CSS, JavaScript, React, and WordPress, focusing on clean UX and maintainable front-end systems.
 
-  I was born and raised in the Berkshires and earned a Bachelor of Science in Multimedia Informatics from the University of Massachusetts, Amherst in 2018. The degree combined aspects of Computer Science, Studio Arts, and Marketing, laying the groundwork for my career at the intersection of art and technology.
+  I earned a B.S. in Multimedia Informatics from the University of Massachusetts Amherst in 2018, blending computer science, design, and marketing.
   
   <img class="content-img" src="/assets/img/about.jpg" width="1800" height="1194" px alt="Photo of Graham at the Getty in Los Angeles" >
   
-  ## Experience
-  **Web Developer, Freelance**
-  Sep 2022 - Present
-  
-  **Web Developer, The Predictive Index**
-  Mar 2021 - Aug 2022 / Westwood, MA
-  
-  **Web Developer, Bartlett Interactive**
-  Jun 2019 - Mar 2021 / Concord, MA
+  <a id="intro-button" href="/resume">View my work history</a>
+
+  ## Selected work
+  <ul class="selected-work-list">
+    <li>
+      <a href="/projects/predictive-index/">The Predictive Index</a> — Web experiences and marketing pages for a talent-optimization platform.
+    </li>
+    <li>
+      <a href="/projects/bartlett/">Bartlett Interactive</a> — Agency work building sites for nonprofits and local organizations.
+    </li>
+    <li>
+      <a href="/projects/scant-goods/">Scant Goods</a> — Product-focused site work with clean UI and strong visuals.
+    </li>
+    <li>
+      <a href="/projects/bookshelf/">Bookshelf</a> — A front-end project focused on layout, typography, and interaction.
+    </li>
+  </ul>
 
   ## Education
   **B.S. Multimedia Informatics, University of Massachusetts**

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 
-  
+  <title>Resume</title>
+
   
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,11 @@
 
   
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo-light.svg" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
   <link rel="manifest" href="/assets/favicons/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="mask-icon" href="/assets/img/logo.svg" color="#2E2E2E">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
   
@@ -30,50 +32,94 @@
   
   <link rel="stylesheet" href="/style.css">
 
-  <title>Resume</title>
+  
+  <script src="/bundle.js" defer></script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ3JP57XNC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QJ3JP57XNC');
-</script>
-
 <body>
   <nav>
     <a href="/">
-      <img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" />
+      <span class="logo-swap" aria-label="Homepage">
+        <img class="logo logo-dark" src="/assets/img/logo.svg" width="25" height="35" alt="Logo" />
+        <img class="logo logo-light" src="/assets/img/logo-light.svg" width="25" height="35" alt="Logo" />
+      </span>
     </a>
     <ul>
       <li>
-        <a href="/blog">
-          Blog
-        </a>
+        <a href="/blog">Blog</a>
       </li>
       <li>
-        <a href="/about">
-          About
-        </a>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/resume">Resume</a>
+      </li>
+      <li>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21.64 13.01A9 9 0 1 1 10.99 2.36a7 7 0 1 0 10.65 10.65Z" fill="currentColor"/>
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 4.25a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 12a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V17a.75.75 0 0 1 .75-.75ZM4.25 12a.75.75 0 0 1 .75-.75h1.25a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Zm12 0a.75.75 0 0 1 .75-.75h1.25a.75.75 0 0 1 0 1.5H17a.75.75 0 0 1-.75-.75ZM6.4 6.4a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm9.26 9.26a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm-9.26 1.06a.75.75 0 0 1 0-1.06l.88-.88a.75.75 0 1 1 1.06 1.06l-.88.88a.75.75 0 0 1-1.06 0Zm9.26-9.26a.75.75 0 0 1 0-1.06l.88-.88a.75.75 0 1 1 1.06 1.06l-.88.88a.75.75 0 0 1-1.06 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="currentColor"/>
+          </svg>
+        </button>
       </li>
     </ul>
   </nav>
   
 <main class="interior-page">
   <h1>Resume</h1>
-  <p>I'm Graham Hagenah, a full-stack web developer focused on crafting performant, accessible digital experiences for everyone. I build websites with HTML, CSS, and JavaScript, as well as front-end libraries like <strong>React</strong>. If I need a content management system, I prefer <strong>WordPress.</strong>
-    
-  <p>I was born and raised in the Berkshires and earned a Bachelor of Science in Multimedia Informatics from the University of Massachusetts, Amherst in 2018. The degree combined aspects of Computer Science, Studio Arts, and Marketing, laying the groundwork for my career at the intersection of art and technology.</p><img class="content-img" src="/assets/img/about.jpg" width="1800" height="1194" px alt="Photo of Graham at the Getty in Los Angeles" />
-  <h2>Work Experience</h2>
-  <p>My most recent role involved building websites and applications for <a href="/projects/predictive-index/">The Predictive Index</a>, a Westwood-based tech company creating personality and cognitive evaluations for the workplace.</p>
-  <p>Before that, I worked at the Concord-based web agency, <a href="/projects/bartlett/">Bartlett Interactive</a> - first as a summer intern, then transitioning into a full-time role building websites for local nonprofits.</p>
-  <p>Throughout the years, I've worked as a freelance web developer. I build websites and applications with static-site generators like <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>, fully-featured Content Management Systems like WordPress, and powerful libraries like React. <strong>I'm open to work!</strong>
-  <p>I've also worked as a graphic designer for the University of Massachusetts, where I created multimedia visuals for print and web.</p>
-  <h2>Beyond Work</h2>
-  <p>You'll likely find me climbing at the rock gym, practicing yoga, reading scince fiction, or watching movies with friends. If you have any questions or want to get in touch, <a href="mailto:gwhagenah@gmail.com"> email me.</a></p>
+<section class="resume-summary">
+  <p>I'm Graham Hagenah, a full-stack web developer who builds accessible, performant websites and web apps. I focus on clean front-end craftsmanship, thoughtful UX, and maintainable systems across static sites, CMS builds, and modern JavaScript stacks.</p>
+</section>
+<section class="resume-section">
+  <h2>Work History</h2>
+  <ol class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-meta">Sep 2022 – Present · Remote / Massachusetts</div>
+      <h3 class="timeline-role">Web Developer, Freelance</h3>
+      <p>Design and build marketing sites, portfolios, and content-driven platforms for small businesses and nonprofits.</p>
+      <ul class="timeline-highlights">
+        <li>Deliver fast, accessible sites using Eleventy, modern CSS, and JavaScript.</li>
+        <li>Collaborate directly with clients on UX, content structure, and deployment.</li>
+      </ul>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-meta">Mar 2021 – Aug 2022 · Westwood, MA</div>
+      <h3 class="timeline-role">Web Developer, The Predictive Index</h3>
+      <p>Built and maintained marketing pages and web experiences for a workplace analytics platform.</p>
+      <ul class="timeline-highlights">
+        <li>Shipped new site sections and landing pages with a focus on performance.</li>
+        <li>Partnered with design and marketing on reusable components.</li>
+      </ul>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-meta">Jun 2019 – Mar 2021 · Concord, MA</div>
+      <h3 class="timeline-role">Web Developer, Bartlett Interactive</h3>
+      <p>Produced websites for nonprofits and local organizations, from discovery through launch.</p>
+      <ul class="timeline-highlights">
+        <li>Built CMS-driven sites and custom front-end components.</li>
+        <li>Optimized for accessibility, SEO, and editor-friendly content workflows.</li>
+      </ul>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-meta">2018 – 2019 · Amherst, MA</div>
+      <h3 class="timeline-role">Graphic Designer, University of Massachusetts</h3>
+      <p>Created multimedia assets for print and web in support of campus marketing.</p>
+    </li>
+  </ol>
+</section>
+<section class="resume-section">
+  <h2>Education</h2>
+  <p><strong>B.S. Multimedia Informatics</strong> — University of Massachusetts Amherst (2018)</p>
+</section>
+<section class="resume-section">
+  <h2>Focus Areas</h2>
+  <p>Front-end development, static site generation, CMS builds (WordPress), responsive design, accessibility, performance optimization.</p>
+</section>
+<div class="resume-cta">
+  <a class="resume-button" href="/assets/docs/GrahamHagenah.pdf">View or download PDF</a>
+</div>
+
 </main>
   <footer>
     <p><span>Developed by Graham Hagenah.</span><span>Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>.</span><span>Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>.</span><span>Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.<span></p>

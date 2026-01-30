@@ -1,6 +1,12 @@
 ## Here's How It All Works
 If it's been a while since you touched this, here's a reminder of the basics.
 
+### Quick start (required)
+Run this first or nothing else will work.
+
+```npm install```
+```npx @11ty/eleventy --serve```
+
 ### Run Eleventy
 We can use the npx command (also provided by Node.js) to run our local project's version of Eleventy. Let’s make sure our installation went okay and try to run Eleventy:
 

@@ -13,10 +13,11 @@
 
   {# Favicons #}
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo-light.svg" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
   <link rel="manifest" href="/assets/favicons/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="mask-icon" href="/assets/img/logo.svg" color="#2E2E2E">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
   
@@ -31,10 +32,17 @@
   {# Styles #}
   <link rel="stylesheet" href="/style.css">
 
+  {# Scripts #}
+  <script src="/bundle.js" defer></script>
 </head>
 <body>
   <nav>
-    <a href="/"><img id="logo" src="/assets/img/logo.svg" aria-label="Homepage" width="25" height="35" alt="Logo" /></a>
+    <a href="/">
+      <span class="logo-swap" aria-label="Homepage">
+        <img class="logo logo-dark" src="/assets/img/logo.svg" width="25" height="35" alt="Logo" />
+        <img class="logo logo-light" src="/assets/img/logo-light.svg" width="25" height="35" alt="Logo" />
+      </span>
+    </a>
     <ul>
       <li>
         <a href="/blog">Blog</a>
@@ -43,7 +51,17 @@
         <a href="/about">About</a>
       </li>
       <li>
-        <a target="_blank" href="/assets/docs/GrahamHagenah.pdf">Resume</a>
+        <a href="/resume">Resume</a>
+      </li>
+      <li>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21.64 13.01A9 9 0 1 1 10.99 2.36a7 7 0 1 0 10.65 10.65Z" fill="currentColor"/>
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 4.25a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V5a.75.75 0 0 1 .75-.75Zm0 12a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V17a.75.75 0 0 1 .75-.75ZM4.25 12a.75.75 0 0 1 .75-.75h1.25a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Zm12 0a.75.75 0 0 1 .75-.75h1.25a.75.75 0 0 1 0 1.5H17a.75.75 0 0 1-.75-.75ZM6.4 6.4a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm9.26 9.26a.75.75 0 0 1 1.06 0l.88.88a.75.75 0 0 1-1.06 1.06l-.88-.88a.75.75 0 0 1 0-1.06Zm-9.26 1.06a.75.75 0 0 1 0-1.06l.88-.88a.75.75 0 1 1 1.06 1.06l-.88.88a.75.75 0 0 1-1.06 0Zm9.26-9.26a.75.75 0 0 1 0-1.06l.88-.88a.75.75 0 1 1 1.06 1.06l-.88.88a.75.75 0 0 1-1.06 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="currentColor"/>
+          </svg>
+        </button>
       </li>
     </ul>
   </nav>
