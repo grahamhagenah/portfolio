@@ -373,6 +373,11 @@ footer span {
   padding-left: 0;
 }
 
+#posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 #posts li {
   margin-bottom: 3rem;
 }
@@ -390,12 +395,13 @@ footer span {
   margin-bottom: 1rem;
 }
 
-#posts h2 {
+#posts h2,
+#posts h3 {
   margin: 0;
-  font-size: 1.5rem;
 }
 
-#posts a:hover h2 {
+#posts a:hover h2,
+#posts a:hover h3 {
   text-decoration: underline;
 }
 
