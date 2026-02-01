@@ -4,7 +4,8 @@ title: Thinking Long-Term for My Personal Website
 subtitle: Migrating my portfolio to a static site generator for long-term stability.
 tags: blog
 intro:
-  summary: I migrated my portfolio website to a static site generator for long-term stability.
+  summary: I migrated my portfolio website to a static-site generator for
+    long-term stability.
   image: /assets/img/simplicity.webp
   preview: /assets/img/simplicity.webp
   alt: ""
