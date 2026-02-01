@@ -365,11 +365,8 @@ footer span {
 
 #posts {
   margin-top: 6rem;
-}
-
-
-#posts ul {
   list-style: none;
+  padding-left: 0;
 }
 
 #posts a {
@@ -402,13 +399,13 @@ a:hover .read-more {
 }
 
 .read-more {
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.5px;
   text-decoration: underline;
-  margin-top: 0rem;
+  margin-top: 0;
   text-decoration-color: #c7c7c7;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
