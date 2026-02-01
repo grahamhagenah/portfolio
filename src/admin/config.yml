@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "project.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "project" }
+      - { label: "Work Story", name: "story", widget: "boolean", default: false, hint: "Enable for work experience narratives" }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1 }
+      - { label: "Tech Stack", name: "stack", widget: "list", allow_add: true, field: { label: "Technology", name: "tech", widget: "string" } }
+      - { label: "Live URL", name: "live", widget: "string", required: false }
+      - { label: "Source URL", name: "source", widget: "string", required: false }
+      - { label: "Company URL", name: "company", widget: "string", required: false }
+      - label: "Intro"
+        name: "intro"
+        widget: "object"
+        fields:
+          - { label: "Summary", name: "summary", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Preview Image", name: "preview", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: "blog" }
+      - label: "Intro"
+        name: "intro"
+        widget: "object"
+        fields:
+          - { label: "Summary", name: "summary", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Preview Image", name: "preview", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

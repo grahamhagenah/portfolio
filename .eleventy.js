@@ -56,6 +56,9 @@ module.exports = function(eleventyConfig) {
 	// And copy scripts
 	eleventyConfig.addPassthroughCopy("src/bundle.js");
 
+  // Copy admin folder for Decap CMS
+  eleventyConfig.addPassthroughCopy("src/admin");
+
   // Copy `assets` to `_site/assets`
   eleventyConfig.addPassthroughCopy("assets");
 
