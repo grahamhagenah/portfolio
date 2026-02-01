@@ -181,11 +181,6 @@ a:hover {
   text-decoration-color: var(--black);
 }
 
-a:hover .arrow {
-  padding-left: 5px;
-  transition: .5s;
-}
-
 p {
   margin-block-start: 2rem;
 }
@@ -364,13 +359,35 @@ footer span {
 }
 
 #posts {
-  margin-top: 6rem;
+  margin-top: 4rem;
   list-style: none;
   padding-left: 0;
 }
 
+#posts li {
+  margin-bottom: 3rem;
+}
+
 #posts a {
   text-decoration: none;
+  display: block;
+}
+
+#posts img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#posts h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#posts a:hover h2 {
+  text-decoration: underline;
 }
 
 #projects .project-image {
@@ -391,24 +408,6 @@ figure {
   border-radius: 10px;
   overflow: hidden;
   height: auto;
-}
-
-a:hover .read-more {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
-.read-more {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  text-decoration: underline;
-  margin-top: 0;
-  text-decoration-color: #c7c7c7;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
 }
 
 .tags li {
@@ -439,25 +438,6 @@ a:hover .read-more {
 a .project-image-wrapper {
   transform: scale(1);
   transition: .5s;
-}
-
-.details p {
-  margin-top: 0px;
-  margin-bottom: 1rem;
-  line-height: 1.75;
-  max-width: 90%;
-}
-
-.details .title {
-  margin: 1rem 0;
-  line-height: 1.5;
-}
-
-.arrow {
-  padding-left: 3px;
-  transition: .25s;
-  position: absolute;
-  margin-left: 5px;
 }
 
 blockquote {
