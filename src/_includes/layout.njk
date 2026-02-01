@@ -34,6 +34,7 @@
 
   {# Scripts #}
   <script src="/bundle.js" defer></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <nav>
@@ -69,5 +70,16 @@
   <footer>
     <p><span>Developed by Graham Hagenah.</span><span>Built with <a target="_blank" href="https://www.11ty.dev">Eleventy</a>.</span><span>Deployed on <a target="_blank" href="https://www.netlify.com">Netlify</a>.</span><span>Code on <a target="_blank" href="https://github.com/grahamhagenah/portfolio">GitHub</a>.<span></p>
   </footer>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
