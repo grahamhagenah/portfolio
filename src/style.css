@@ -208,13 +208,35 @@ footer span {
 
 #projects ul {
   list-style: none;
+  padding-left: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
 }
 
-#projects li {
-  display: inline-block;
+#projects a {
+  text-decoration: none;
+  display: block;
+}
+
+#projects img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#projects h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+#projects p {
+  margin: 0;
+  color: var(--grey);
+}
+
+#projects a:hover h3 {
+  text-decoration: underline;
 }
 
 .summary-tag {
@@ -233,19 +255,6 @@ footer span {
 .browser {
   width: 100%;
   display: block;
-}
-
-.project-image-wrapper,
-.blog-image-wrapper {
-  height: auto;
-  border: none;
-  margin: 0;
-  background-color: transparent;
-}
-
-.blog-image {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .project-image {
@@ -390,10 +399,6 @@ footer span {
   text-decoration: underline;
 }
 
-#projects .project-image {
-  border-radius: 10px;
-}
-
 .content-img {
   width: 100%;
   height: auto;
@@ -422,22 +427,10 @@ figure {
   letter-spacing: 0.5px;
 }
 
-#projects a,
 .project-introduction a {
   text-decoration: none;
-  text-decoration: none; 
   min-width: 150px;
   display: inline-block;
-}
-
-#projects .project-image-wrapper:hover {
-  transform: scale(1.025);
-  transition: .15s;
-}
-
-a .project-image-wrapper {
-  transform: scale(1);
-  transition: .5s;
 }
 
 blockquote {
@@ -854,23 +847,8 @@ body[data-theme="dark"] .tags li {
 
   #projects ul, #posts ul {
     display: grid;
-    gap: 8rem 4rem;
+    gap: 4rem;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-
-  #intro {
-    font-size: 22px;
-  }
-
-  .project-image-wrapper,
-  .blog-image-wrapper {
-    height: 300px;
-    justify-content: center;
-  }
-
-  .blog-image {
-    height: 100%;
-    width: auto;
   }
 
   #introduction p {
