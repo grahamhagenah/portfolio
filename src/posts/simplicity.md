@@ -41,4 +41,4 @@ Although Gatsby produces static output, maintaining the site still meant keeping
 
 I’m hopeful this website stands the test of time—and that I can look back a decade from now knowing I made the right decision. The tried-and-true building blocks of the web aren’t going away anytime soon, so betting on them feels safe. I can’t guarantee that an exciting new tool won’t appear next week and tempt me to scrap this setup, but it’ll be a tall order.
 
-I’ll check back in 2030
+I’ll check back in 2030.
