@@ -162,6 +162,52 @@ body {
   text-align: center;
 }
 
+/* Desktop: show inline nav, hide hamburger */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-overlay {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .menu-items li {
+    margin: 0;
+  }
+
+  .menu-items a {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .theme-toggle {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .theme-icon-wrapper {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .menu-items li {
   margin: 2rem 0;
 }
