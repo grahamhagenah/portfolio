@@ -40,7 +40,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 5%;
+  padding: 0.85rem 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -65,16 +65,31 @@ body {
 .logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .logo-swap {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .logo {
-  height: 24px;
+  height: 22px;
   width: auto;
+}
+
+.logo-text {
+  display: inline-block;
+  margin-left: 0.85rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 .logo-light {
@@ -168,20 +183,34 @@ body {
   margin: 1.5rem 0;
 }
 
-.nav-links a {
+.nav-links a,
+.theme-toggle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--black);
   font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.nav-links a:hover {
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.theme-toggle:hover {
   color: var(--grey);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
 }
 
 .nav-icon {
@@ -225,7 +254,8 @@ body {
     background: transparent;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .theme-toggle {
     font-size: 1rem;
     letter-spacing: 1px;
     gap: 0.4rem;
@@ -236,41 +266,15 @@ body {
     height: 18px;
   }
 
-  .theme-toggle {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    gap: 0.4rem;
-  }
-
   .theme-icon-wrapper {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .theme-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-  color: var(--black);
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.theme-toggle:hover {
-  color: var(--grey);
 }
 
 .theme-label {
@@ -327,22 +331,25 @@ body {
 }
 
 
-#intro-button {
+.button-outline {
   display: inline-block;
   padding: 5px 1.5rem 5px 1rem;
   background-color: transparent;
   border-radius: 10px;
   border: 3px solid rgb(236, 236, 236);
   color: black;
-  margin: 2.5rem 0 0 0;
   text-decoration: none;
-  transition: .25s;
+  transition: 0.25s;
 }
 
-#intro-button:hover {
+.button-outline:hover {
   background-color: black;
   color: white;
   border: 3px solid black;
+}
+
+#intro-button {
+  margin: 2.5rem 0 0 0;
 }
 
 .project-description {
@@ -350,7 +357,7 @@ body {
 }
 
 #introduction {
-  margin: 6rem 0;
+  margin: 10rem 0 6rem 0;
   text-align: left;
 }
 
@@ -381,10 +388,13 @@ p {
 footer {
   margin-top: 10rem;
   text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: var(--grey);
 }
 
 footer a {
-  color: var(--grey);
+  color: inherit;
 }
 
 footer a:hover {
@@ -531,23 +541,6 @@ footer span {
 
 .resume-cta {
   margin-top: 3rem;
-}
-
-.resume-button {
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
-  border: 2px solid var(--black);
-  border-radius: 999px;
-  text-decoration: none;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.resume-button:hover {
-  background-color: var(--black);
-  color: #ffffff;
 }
 
 .selected-work-list {
@@ -779,7 +772,7 @@ body[data-theme="dark"] {
 
 body[data-theme="dark"] nav {
   background: rgba(15, 17, 21, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
 }
 
 body[data-theme="dark"] .logo-dark {
@@ -790,27 +783,17 @@ body[data-theme="dark"] .logo-light {
   display: inline;
 }
 
+
 body[data-theme="dark"] a {
   text-decoration-color: #5a6472;
 }
 
-body[data-theme="dark"] #intro-button {
+body[data-theme="dark"] .button-outline {
   border-color: #5a6472;
   color: #f1f3f7;
 }
 
-body[data-theme="dark"] #intro-button:hover {
-  background-color: #f1f3f7;
-  color: #0f1115;
-  border-color: #f1f3f7;
-}
-
-body[data-theme="dark"] .resume-button {
-  border-color: #5a6472;
-  color: #f1f3f7;
-}
-
-body[data-theme="dark"] .resume-button:hover {
+body[data-theme="dark"] .button-outline:hover {
   background-color: #f1f3f7;
   color: #0f1115;
   border-color: #f1f3f7;
@@ -914,7 +897,13 @@ body[data-theme="dark"] .tags li {
   }
 
   .logo {
-    height: 35px;
+    height: 16px;
+  }
+
+
+  .logo-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
 
   h1 {
@@ -978,9 +967,8 @@ body[data-theme="dark"] .tags li {
   }
 
   #introduction {
-    margin: 2rem 0 2rem 0;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 8rem auto 2rem;
     text-align: center;
   }
 

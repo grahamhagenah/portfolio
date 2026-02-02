@@ -58,5 +58,5 @@ title: Resume
 </section>
 
 <div class="resume-cta">
-  <a class="resume-button" href="/assets/docs/GrahamHagenah.pdf">View or download PDF</a>
+  <a class="button-outline" href="/assets/docs/GrahamHagenah.pdf">Download CV</a>
 </div>

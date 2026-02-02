@@ -10,7 +10,7 @@ title: About
   
   <img class="content-img" src="/assets/img/about.jpg" width="1800" height="1194" px alt="Photo of Graham at the Getty in Los Angeles" >
   
-  <a id="intro-button" href="/resume">View my work history</a>
+  <a id="intro-button" class="button-outline" href="/resume">View my work history</a>
 
   ## Selected work
   <ul class="selected-work-list">
