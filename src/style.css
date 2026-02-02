@@ -62,8 +62,13 @@ body {
   padding-top: 50px;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
 .logo-swap {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
@@ -189,15 +194,18 @@ body {
     height: auto;
     background: transparent;
     flex-direction: row;
+    align-items: center;
     gap: 2rem;
+  }
+
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
 
   [data-theme="dark"] .nav-links {
     background: transparent;
-  }
-
-  .nav-links li {
-    margin: 0;
   }
 
   .nav-links a {
