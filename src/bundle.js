@@ -13,6 +13,7 @@ let isTicking = false
 
 document.addEventListener('DOMContentLoaded', function() {
   initThemeToggle()
+  initMenuToggle()
 
   mosaicWrapper = document.querySelector('.mosaic-wrapper')
   if (!mosaicWrapper) {
@@ -129,4 +130,28 @@ function setTheme(theme, toggleButton, shouldAnimate = false) {
       document.body.classList.remove('theme-transition')
     }, 600)
   }
+}
+
+function initMenuToggle() {
+  const menuToggle = document.querySelector('.menu-toggle')
+  const nav = document.querySelector('nav')
+  const menuLinks = document.querySelectorAll('.menu-items a')
+
+  if (!menuToggle || !nav) {
+    return
+  }
+
+  menuToggle.addEventListener('click', function() {
+    const isOpen = nav.classList.toggle('menu-open')
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  })
+
+  menuLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      nav.classList.remove('menu-open')
+      menuToggle.setAttribute('aria-expanded', 'false')
+      document.body.style.overflow = ''
+    })
+  })
 }
