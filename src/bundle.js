@@ -122,7 +122,11 @@ function initThemeToggle() {
 
 function setTheme(theme, toggleButton, shouldAnimate = false) {
   document.body.setAttribute('data-theme', theme)
-  toggleButton.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false')
+
+  const label = toggleButton.querySelector('[data-theme-label]')
+  if (label) {
+    label.textContent = theme === 'dark' ? 'Dark' : 'Light'
+  }
 
   if (shouldAnimate) {
     document.body.classList.add('theme-transition')

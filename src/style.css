@@ -166,33 +166,44 @@ nav {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: 2px solid var(--light-grey);
+  gap: 0.5rem;
+  border: none;
   background: transparent;
-  border-radius: 999px;
-  width: 36px;
-  height: 36px;
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 0;
+  color: var(--black);
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .theme-toggle:hover {
-  border-color: var(--black);
+  color: var(--grey);
+}
+
+.theme-label {
+  transition: color 0.2s ease;
 }
 
 .theme-icon {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   color: var(--black);
-  position: absolute;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: none;
 }
 
-.theme-icon-sun {
-  opacity: 0;
-  transform: translateY(8px) rotate(-15deg);
+.theme-icon-moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+  display: block;
 }
 
 .section-header {
