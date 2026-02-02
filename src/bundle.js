@@ -140,7 +140,7 @@ function setTheme(theme, toggleButton, shouldAnimate = false) {
 function initMenuToggle() {
   const menuToggle = document.querySelector('.menu-toggle')
   const nav = document.querySelector('nav')
-  const menuLinks = document.querySelectorAll('.menu-items a')
+  const menuLinks = document.querySelectorAll('.nav-links a')
 
   if (!menuToggle || !nav) {
     return
