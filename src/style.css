@@ -82,7 +82,6 @@ nav {
   height: 2px;
   background-color: var(--black);
   position: relative;
-  transition: background-color 0.3s ease;
 }
 
 .hamburger::before,
@@ -92,7 +91,6 @@ nav {
   width: 24px;
   height: 2px;
   background-color: var(--black);
-  transition: transform 0.3s ease;
 }
 
 .hamburger::before {
@@ -103,17 +101,18 @@ nav {
   top: 7px;
 }
 
-/* Hamburger to X animation */
 .menu-open .hamburger {
   background-color: transparent;
 }
 
 .menu-open .hamburger::before {
-  transform: rotate(45deg) translate(5px, 5px);
+  top: 0;
+  transform: rotate(45deg);
 }
 
 .menu-open .hamburger::after {
-  transform: rotate(-45deg) translate(5px, -5px);
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 /* Menu Overlay */
