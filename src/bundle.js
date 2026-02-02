@@ -14,6 +14,7 @@ let isTicking = false
 document.addEventListener('DOMContentLoaded', function() {
   initThemeToggle()
   initMenuToggle()
+  initStickyNav()
 
   mosaicWrapper = document.querySelector('.mosaic-wrapper')
   if (!mosaicWrapper) {
@@ -157,5 +158,33 @@ function initMenuToggle() {
       menuToggle.setAttribute('aria-expanded', 'false')
       document.body.style.overflow = ''
     })
+  })
+}
+
+function initStickyNav() {
+  const nav = document.querySelector('nav')
+  if (!nav) {
+    return
+  }
+
+  let lastScrollY = window.scrollY
+  let ticking = false
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        const currentScrollY = window.scrollY
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          nav.classList.add('nav-hidden')
+        } else {
+          nav.classList.remove('nav-hidden')
+        }
+
+        lastScrollY = currentScrollY
+        ticking = false
+      })
+      ticking = true
+    }
   })
 }

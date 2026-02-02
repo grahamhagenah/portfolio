@@ -40,8 +40,22 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
-  position: relative;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+nav.nav-hidden {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 70px;
 }
 
 .logo-swap {
