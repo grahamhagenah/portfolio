@@ -197,6 +197,10 @@ body {
     letter-spacing: 1px;
   }
 
+  .theme-label {
+    display: none;
+  }
+
   .theme-icon-wrapper {
     width: 20px;
     height: 20px;
