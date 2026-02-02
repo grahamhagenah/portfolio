@@ -704,61 +704,6 @@ body[data-theme="dark"] .resume-button:hover {
   border-color: #f1f3f7;
 }
 
-body[data-theme="dark"] .theme-icon-moon {
-  opacity: 0;
-  transform: translateY(-8px) rotate(15deg);
-}
-
-body[data-theme="dark"] .theme-icon-sun {
-  opacity: 1;
-  transform: translateY(0) rotate(0deg);
-}
-
-body[data-theme="light"] .theme-icon-moon {
-  opacity: 1;
-  transform: translateY(0) rotate(0deg);
-}
-
-body[data-theme="light"] .theme-icon-sun {
-  opacity: 0;
-  transform: translateY(8px) rotate(-15deg);
-}
-
-body.theme-transition[data-theme="dark"] .theme-icon-sun {
-  animation: sun-rise 0.55s ease;
-}
-
-body.theme-transition[data-theme="dark"] .theme-icon-moon {
-  animation: moon-set 0.55s ease;
-}
-
-body.theme-transition[data-theme="light"] .theme-icon-moon {
-  animation: moon-rise 0.55s ease;
-}
-
-body.theme-transition[data-theme="light"] .theme-icon-sun {
-  animation: sun-set 0.55s ease;
-}
-
-@keyframes sun-rise {
-  0% { opacity: 0; transform: translateY(10px) rotate(-20deg); }
-  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
-}
-
-@keyframes sun-set {
-  0% { opacity: 1; transform: translateY(0) rotate(0deg); }
-  100% { opacity: 0; transform: translateY(10px) rotate(20deg); }
-}
-
-@keyframes moon-rise {
-  0% { opacity: 0; transform: translateY(10px) rotate(20deg); }
-  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
-}
-
-@keyframes moon-set {
-  0% { opacity: 1; transform: translateY(0) rotate(0deg); }
-  100% { opacity: 0; transform: translateY(-10px) rotate(-20deg); }
-}
 
 body[data-theme="dark"] blockquote {
   border-left-color: #4fbbe0;
