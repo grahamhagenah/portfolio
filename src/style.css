@@ -162,6 +162,24 @@ body {
   text-align: center;
 }
 
+.menu-items li {
+  margin: 2rem 0;
+}
+
+.menu-items a {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.2s ease;
+}
+
+.menu-items a:hover {
+  color: var(--grey);
+}
+
 /* Desktop: show inline nav, hide hamburger */
 @media (min-width: 768px) {
   .menu-toggle {
@@ -210,24 +228,6 @@ body {
     width: 20px;
     height: 20px;
   }
-}
-
-.menu-items li {
-  margin: 2rem 0;
-}
-
-.menu-items a {
-  color: var(--black);
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: color 0.2s ease;
-}
-
-.menu-items a:hover {
-  color: var(--grey);
 }
 
 .theme-toggle {
